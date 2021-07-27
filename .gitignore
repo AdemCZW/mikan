@@ -1,7 +1,6 @@
 # Django #
-*.log
-*.pot
+djangogirls_venv
 *.pyc
 __pycache__
+staticfiles
 db.sqlite3
-media
