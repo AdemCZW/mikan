@@ -27,7 +27,8 @@ DEBUG = True
 
 ALLOWED_HOSTS = [
 
-    'buyforone.herokuapp.com/'
+    'buyforone.herokuapp.com',
+     '127.0.0.1'
 
 ]
 
@@ -129,4 +130,4 @@ STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'templates/static'),
 ]
 
-STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
