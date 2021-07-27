@@ -1,2 +1,2 @@
-web: gunicorn todo111 djangotodo.wsgi
+web: gunicorn djangotodo.wsgi
 
