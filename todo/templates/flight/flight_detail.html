@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+    <ul class="list-group list-group-flush">
+        <li class="list-group-item">啟程：{{ object.fromname }}</li>
+        <li class="list-group-item">抵達：{{ object.arrivalname }}</li>
+        <li class="list-group-item">建立日期：{{ object.pub_date }}</li>
+    </ul>
+
+{% endblock  %}
