@@ -1,4 +1,4 @@
-#!/Users/jhihweichan/todo111/flight_venv/bin/python3
+#!/Users/jhihweichan/todo111/flight_venv/bin/python
 # -*- coding: utf-8 -*-
 import re
 import sys
