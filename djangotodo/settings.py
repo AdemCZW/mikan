@@ -27,8 +27,7 @@ DEBUG = True
 
 ALLOWED_HOSTS = [
 
-    'buyforone.herokuapp.com',
-     '127.0.0.1'
+    'buyforone.herokuapp.com','127.0.0.1'
 
 ]
 
@@ -61,7 +60,7 @@ ROOT_URLCONF = 'djangotodo.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [os.path.join('templates')],
+        'DIRS': [],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -125,9 +124,5 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
 
 STATIC_URL = '/static/'
-
-STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, 'templates/static'),
-]
 
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
