@@ -17,7 +17,7 @@ class FlightModelForm(forms.ModelForm):
     """docstring for FlightModelForm"""
     class Meta:
         model = Flight
-        fields = ( 'items', 'fromname', 'arrivalname', 'description', 'pub_date')
+        fields = ( 'items', 'fromname', 'arrivalname', 'description')
         widgets = {
             'items':forms.TextInput(attrs={'class':'form-control','rows':'4'}),
             'fromname': forms.TextInput(attrs={'class': 'custom-select','id': 'inputGroupSelect01'}),
