@@ -20,8 +20,8 @@ class FlightModelForm(forms.ModelForm):
         fields = ( 'items', 'fromname', 'arrivalname', 'description')
         widgets = {
             'items':forms.TextInput(attrs={'class':'form-control','rows':'4'}),
-            'fromname': forms.TextInput(attrs={'class': 'custom-select','id': 'inputGroupSelect01'}),
-            'arrivalname': forms.TextInput(attrs={'class': 'custom-select','id': 'inputGroupSelect01'}),
+            'fromname': forms.TextInput(attrs={'class': 'form-control','rows':'4'}),
+            'arrivalname': forms.TextInput(attrs={'class': 'form-control','rows':'4'}),
             'description': forms.TextInput(attrs={'class': 'form-control', 'rows': '4'}),
         }
 
