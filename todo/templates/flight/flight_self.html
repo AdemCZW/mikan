@@ -39,10 +39,13 @@
                                             <h4 class="card-title">上傳項目</h4>
                                             <form class="mt-4" action="/flight/create" method="POST">
                                                 {% csrf_token %}
-                                                <h4 class="card-title">種類</h4>
-                                            
-                                                <div class="form-group">
+                                                <div class="input-group mb-3">
+                                                    <div class="input-group-prepend">
+                                                        <label class="input-group-text" for="inputGroupSelect01">種類</label>
+                                                    </div>
                                                     {{ form.items }}
+                                                        
+                                                    
                                                 </div>
                                                 <div class="input-group mb-3">
                                                     <div class="input-group-prepend">
@@ -83,7 +86,7 @@
                         <div class="card">
                             <div class="card-body">
                                 <div class="d-flex align-items-center mb-4">
-                                    <h4 class="card-title">List</h4>
+                                    <h4 class="card-title">我的商品</h4>
                                     <div class="ml-auto">
                                         <div class="dropdown sub-dropdown">
                                             <button class="btn btn-link text-muted dropdown-toggle" type="button"
@@ -100,7 +103,7 @@
                                     </div>
                                 </div>
                                 <div class="table-responsive">
-                                    <table class="table no-wrap v-middle mb-0">
+                                    <table class="table table-striped table-bordered no-wrap">
                                         <thead>
                                             <tr class="border-0">
                                                 <th class="border-0 font-14">
