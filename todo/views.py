@@ -8,6 +8,7 @@ from django.contrib import auth
 from .models import Todo, Member, Flight
 from .forms import TodoModelForm, FlightModelForm
 from django.contrib.auth.mixins import LoginRequiredMixin
+from .filters import FlightFilter
 from django.views.generic import (
     ListView,
     CreateView,
@@ -65,11 +66,11 @@ class FlightListView(ListView):
     def dispatch(self, request, *args, **kwargs):
         return super(FlightListView, self).dispatch(request, *args, **kwargs)
 
-    # 要傳遞的資料
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
-        context["form"] = FlightModelForm()  # 資料模型表單
+        context["filter"] = FlightFilter(self.request.GET, queryset=self.get_queryset())  # 資料模型表單
         return context
+   
 
 class FlightMyListView(LoginRequiredMixin, ListView):
     model = Flight
@@ -152,6 +153,8 @@ def sign_in(request):
 def log_out(request):
     logout(request)
     return redirect('/login') #重新導向到登入畫面
+
+
 
 
 

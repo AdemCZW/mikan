@@ -12,6 +12,7 @@ from .views import (
     FlightDetailView,
     FlightMyListView,
 
+
 )
 
 app_name = 'todo'
@@ -22,5 +23,6 @@ urlpatterns = [
     path('update/<int:pk>', FlightUpdateView.as_view(), name='update'),
     path('delete/<int:pk>', FlightDeleteView.as_view(), name='delete'),
     path('detail/<int:pk>', FlightDetailView.as_view(), name='detail'),
+   
 
 ]

@@ -1,5 +1,6 @@
 from django.contrib import admin
-from .models import Todo,Customer,Flight
+from .models import Todo,Customer,Flight,Movie
+
 
 
 class TodoAdmin(admin.ModelAdmin):
@@ -14,7 +15,11 @@ admin.site.register(Customer, CustomerAdmin)  # 加入至Administration(管理�
 
 
 class FlightAdmin(admin.ModelAdmin):
-	list_display = ('user', 'items', 'fromname', 'arrivalname', 'description', 'finish')
+	list_display = ('user', 'items', 'fromname', 'pd_name', 'description', 'finish')
 		
 admin.site.register(Flight)
 
+class MovieAdmin(admin.ModelAdmin):
+    list_display = ('title', 'genre', 'release_year')
+ 
+admin.site.register(Movie, MovieAdmin)

@@ -23,8 +23,6 @@ class FlightModelForm(forms.ModelForm):
             'fromname': forms.TextInput(attrs={'class': 'custom-select','id': 'inputGroupSelect01'}),
             'arrivalname': forms.TextInput(attrs={'class': 'custom-select','id': 'inputGroupSelect01'}),
             'description': forms.TextInput(attrs={'class': 'form-control', 'rows': '4'}),
-
-
         }
 
 

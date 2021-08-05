@@ -33,6 +33,52 @@
                 <!-- Start Top Leader Table -->
                 <!-- *************************************************************** -->
                 <div class="row">
+                            <div class="col-sm-12 col-md-6 col-lg-4">
+                                   <div class="card">
+                                        <div class="card-body">
+                                            <h4 class="card-title">上傳項目</h4>
+                                            <form class="mt-4" action="/flight/create" method="POST">
+                                                {% csrf_token %}
+                                                <h4 class="card-title">種類</h4>
+                                            
+                                                <div class="form-group">
+                                                    {{ form.items }}
+                                                </div>
+                                                <div class="input-group mb-3">
+                                                    <div class="input-group-prepend">
+                                                        <label class="input-group-text" for="inputGroupSelect01">國家</label>
+                                                    </div>
+                                                    {{ form.fromname }}
+                                                        
+                                                    
+                                                </div>
+                                                
+                                                <div class="input-group mb-3">
+                                                    <div class="input-group-prepend">
+                                                        <label class="input-group-text" for="inputGroupSelect01">品名</label>
+                                                    </div>
+                                                   {{ form.arrivalname }}
+                                                </div>
+                                                <div class="form-group">
+                                                    
+                                                </div>
+        
+                                            <h4 class="card-title">託運註明</h4>
+                                            
+                                                <div class="form-group">
+                                                    {{ form.description }}
+                                                </div>
+                                                <button type="submit" class="btn btn-block btn-xs btn-success">上傳</button>
+                                            </form>
+                                            
+                                        </div>
+                                    </div>
+                            </div>
+                            
+
+                    </div>
+                
+                <div class="row">
                     <div class="col-12">
                         <div class="card">
                             <div class="card-body">
@@ -111,52 +157,7 @@
                 <!-- End Top Leader Table -->
                 <!-- *************************************************************** -->
                 
-                     <div class="row">
-                            <div class="col-sm-12 col-md-6 col-lg-4">
-                                   <div class="card">
-                                        <div class="card-body">
-                                            <h4 class="card-title">上傳項目</h4>
-                                            <form class="mt-4" action="/flight/create" method="POST">
-                                                {% csrf_token %}
-                                                <h4 class="card-title">種類</h4>
-                                            
-                                                <div class="form-group">
-                                                    {{ form.items }}
-                                                </div>
-                                                <div class="input-group mb-3">
-                                                    <div class="input-group-prepend">
-                                                        <label class="input-group-text" for="inputGroupSelect01">國家</label>
-                                                    </div>
-                                                    {{ form.fromname }}
-                                                        
-                                                    
-                                                </div>
-                                                
-                                                <div class="input-group mb-3">
-                                                    <div class="input-group-prepend">
-                                                        <label class="input-group-text" for="inputGroupSelect01">品名</label>
-                                                    </div>
-                                                   {{ form.arrivalname }}
-                                                </div>
-                                                <div class="form-group">
-                                                    
-                                                </div>
-        
-                                            <h4 class="card-title">託運註明</h4>
-                                            
-                                                <div class="form-group">
-                                                    {{ form.description }}
-                                                </div>
-                                                <button type="submit" class="btn btn-block btn-xs btn-success">上傳</button>
-                                            </form>
-                                            
-                                        </div>
-                                    </div>
-                            </div>
-                            
-
-                    </div>
-                
+                     
             </div>
             <!-- ============================================================== -->
             <!-- End Container fluid  -->
