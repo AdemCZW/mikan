@@ -33,13 +33,19 @@ class Customer(models.Model):
     password = models.CharField(max_length=20, blank=False, null=True)    
 
 class Flight(models.Model):
+    items_choices = (
+        ('tops', '衣服'),('pants','褲子'),('shoes','鞋子'),('accessories','配件'),('maintenance','保養品'),('makeup','化妝品'),
+    )
     user = models.ForeignKey(User, default=1, on_delete=models.CASCADE)
-    items = models.CharField(max_length=100, default=" ")
+    items = models.CharField(max_length=20, choices=items_choices)
     fromname = models.CharField(max_length=10)
     arrivalname = models.CharField(max_length=50)
+    pd_number = models.CharField(max_length=10, null=True)
     description = models.CharField(max_length=100)
     finish = models.BooleanField(default=False)
     pub_date = models.DateTimeField(null=True)
+    pd_content = models.CharField(max_length=1000,null=True)
+
     
     
 class Movie(models.Model):

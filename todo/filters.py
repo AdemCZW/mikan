@@ -6,11 +6,11 @@ import django_filters
 class FlightFilter(django_filters.FilterSet):
 
     items = django_filters.CharFilter(
-        lookup_expr='icontains',
-        widget=forms.TextInput(attrs={'class': 'form-control'}))
+       
+        widget=forms.Select(choices=(('', '請選擇'),) + Flight.items_choices,attrs={'class': 'form-control'}))
  
     class Meta:
         model = Flight
         fields = {
-            'items':['icontains'],
+            'items'
             }

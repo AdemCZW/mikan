@@ -17,12 +17,15 @@ class FlightModelForm(forms.ModelForm):
     """docstring for FlightModelForm"""
     class Meta:
         model = Flight
-        fields = ( 'items', 'fromname', 'arrivalname', 'description')
+        fields = ( 'items', 'fromname', 'arrivalname', 'description', 'pd_number', 'pd_content')
         widgets = {
-            'items':forms.TextInput(attrs={'class':'form-control','rows':'4'}),
+            'items': forms.Select(choices=(('', '請選擇'),) + Flight.items_choices, attrs={'class': 'form-control'}),
             'fromname': forms.TextInput(attrs={'class': 'form-control','rows':'4'}),
             'arrivalname': forms.TextInput(attrs={'class': 'form-control','rows':'4'}),
             'description': forms.TextInput(attrs={'class': 'form-control', 'rows': '4'}),
+            'pd_number': forms.TextInput(attrs={'class': 'form-control', 'rows': '4'}),
+            'pd_content': forms.Textarea(attrs={'class': 'form-control', 'rows': '10'}),
+
         }
 
 
@@ -32,7 +35,6 @@ class RegisterForm(UserCreationForm):
         label="帳號",
         widget=forms.TextInput(attrs={'class': 'form-control'})
     )
-    
     email = forms.EmailField(
         label="電子郵件",
         widget=forms.EmailInput(attrs={'class': 'form-control'})

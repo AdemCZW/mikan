@@ -45,12 +45,14 @@
                                 <div class="col-sm-12 col-md-6 col-lg-4">
                                     <div class="form-group">
                                         {% csrf_token %}
-                                        <div class="input-group-prepend">
-                                             <label class="input-group-text" for="inputGroupSelect01">
-                                                品項
-                                             </label>
+                                        <div class="input-group mb-3">
+                                                    <div class="input-group-prepend">
+                                                        <label class="input-group-text" for="inputGroupSelect01">種類</label>
+                                                    </div>
                                                 <form action="" method="get">
+
                                                     {{ filter.form.items }}
+                                                    
                                                 <button type="submit" class="btn btn-block btn-xs btn-success" value="search">search</button>
                                                 </form>
 
@@ -68,10 +70,10 @@
                                                     國家
                                                 </th>
                                                 <th class="border-0 font-14">
-                                                    品項
+                                                    種類
                                                 </th>
                                                  <th class="border-0 font-14">
-                                                    品名
+                                                    商品名稱
                                                 </th>
 
                                                 <th class="border-0 font-14">
@@ -94,7 +96,6 @@
                                                  <td class="font-weight-medium text-dark text-centerborder-top-0 py-4">
                                                      {{ todo.arrivalname }}
                                                 </td>
-                                                
                                                 <td class="font-weight-medium text-dark text-centerborder-top-0 py-4">
                                                      {{ todo.description }}
                                                 </td>
