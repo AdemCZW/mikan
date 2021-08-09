@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Todo,Customer,Flight,Movie
+from .models import Todo,Customer,Flight
 
 
 
@@ -19,7 +19,3 @@ class FlightAdmin(admin.ModelAdmin):
 		
 admin.site.register(Flight)
 
-class MovieAdmin(admin.ModelAdmin):
-    list_display = ('title', 'genre', 'release_year')
- 
-admin.site.register(Movie, MovieAdmin)
