@@ -25,6 +25,7 @@ class FlightModelForm(forms.ModelForm):
             'description': forms.TextInput(attrs={'class': 'form-control', 'rows': '4'}),
             'pd_number': forms.TextInput(attrs={'class': 'form-control', 'rows': '4'}),
             'pd_content': forms.Textarea(attrs={'class': 'form-control', 'rows': '10'}),
+            'pub_date': forms.TextInput(attrs={'class': 'form-control', 'rows': '4'}),
 
         }
 

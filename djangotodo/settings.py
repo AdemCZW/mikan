@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'todo.apps.TodoConfig',
     'django_filters',
+    'ckeditor',
 ]
 
 MIDDLEWARE = [

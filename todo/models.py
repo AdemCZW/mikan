@@ -1,6 +1,7 @@
 from django.db import models
 from django.utils import timezone
 from django.contrib.auth.models import User
+from ckeditor.fields import RichTextField
 
 
 
@@ -43,7 +44,6 @@ class Flight(models.Model):
     pd_number = models.CharField(max_length=10, null=True)
     description = models.CharField(max_length=100)
     finish = models.BooleanField(default=False)
-    pub_date = models.DateTimeField(null=True)
-    pd_content = models.CharField(max_length=1000,null=True)
-
+    pub_date = models.DateTimeField(null=True,auto_now=True)
+    pd_content = RichTextField()
     

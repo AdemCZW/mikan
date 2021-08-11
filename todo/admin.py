@@ -15,7 +15,7 @@ admin.site.register(Customer, CustomerAdmin)  # 加入至Administration(管理�
 
 
 class FlightAdmin(admin.ModelAdmin):
-	list_display = ('user', 'items', 'fromname', 'description', 'finish',  'pd_number','pd_content')
+	list_display = ('user', 'items', 'fromname', 'description', 'finish',  'pd_number', 'pd_content', 'pub_date')
 		
 admin.site.register(Flight)
 
