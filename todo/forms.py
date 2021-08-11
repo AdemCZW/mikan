@@ -28,7 +28,7 @@ class FlightModelForm(forms.ModelForm):
             'description': forms.TextInput(attrs={'class': 'form-control', 'rows': '4'}),
             'pd_number': forms.TextInput(attrs={'class': 'form-control', 'rows': '4'}),
             'pub_date': forms.TextInput(attrs={'class': 'form-control', 'rows': '4'}),
-
+            'pd_content':RichTextField()
         }
 
 
