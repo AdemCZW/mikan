@@ -3,6 +3,9 @@ from .models import Todo,Customer,Flight
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth.models import User
 from django.urls import reverse
+from ckeditor.fields import RichTextField
+
+
 
 class TodoModelForm(forms.ModelForm):
     class Meta:
@@ -24,7 +27,7 @@ class FlightModelForm(forms.ModelForm):
             'arrivalname': forms.TextInput(attrs={'class': 'form-control','rows':'4'}),
             'description': forms.TextInput(attrs={'class': 'form-control', 'rows': '4'}),
             'pd_number': forms.TextInput(attrs={'class': 'form-control', 'rows': '4'}),
-            'pd_content': forms.Textarea(attrs={'class': 'form-control', 'rows': '10'}),
+            'pd_content': RichTextField(),
             'pub_date': forms.TextInput(attrs={'class': 'form-control', 'rows': '4'}),
 
         }
