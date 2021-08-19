@@ -3,6 +3,10 @@ from .models import Todo,Customer,Flight
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth.models import User
 from django.urls import reverse
+from ckeditor.fields import RichTextFormField
+from ckeditor.widgets import CKEditorWidget
+
+
 
 class TodoModelForm(forms.ModelForm):
     class Meta:
@@ -15,17 +19,18 @@ class TodoModelForm(forms.ModelForm):
 
 class FlightModelForm(forms.ModelForm):
     """docstring for FlightModelForm"""
+    pd_content = forms.CharField(widget=CKEditorWidget())
     class Meta:
         model = Flight
-        fields = ( 'items', 'fromname', 'arrivalname', 'description', 'pd_number', 'pd_content')
+        fields = ( 'items', 'fromname', 'arrivalname', 'description', 'pd_number','pd_content',)
         widgets = {
             'items': forms.Select(choices=(('', '請選擇'),) + Flight.items_choices, attrs={'class': 'form-control'}),
             'fromname': forms.TextInput(attrs={'class': 'form-control','rows':'4'}),
             'arrivalname': forms.TextInput(attrs={'class': 'form-control','rows':'4'}),
             'description': forms.TextInput(attrs={'class': 'form-control', 'rows': '4'}),
             'pd_number': forms.TextInput(attrs={'class': 'form-control', 'rows': '4'}),
-            'pd_content': forms.Textarea(attrs={'class': 'form-control', 'rows': '10'}),
             'pub_date': forms.TextInput(attrs={'class': 'form-control', 'rows': '4'}),
+
 
         }
 
