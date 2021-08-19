@@ -19,7 +19,7 @@ class TodoModelForm(forms.ModelForm):
 
 class FlightModelForm(forms.ModelForm):
     """docstring for FlightModelForm"""
-    pd_content = forms.CharField(widget=CKEditorWidget())
+    
     class Meta:
         model = Flight
         fields = ( 'items', 'fromname', 'arrivalname', 'description', 'pd_number','pd_content',)
@@ -30,7 +30,7 @@ class FlightModelForm(forms.ModelForm):
             'description': forms.TextInput(attrs={'class': 'form-control', 'rows': '4'}),
             'pd_number': forms.TextInput(attrs={'class': 'form-control', 'rows': '4'}),
             'pub_date': forms.TextInput(attrs={'class': 'form-control', 'rows': '4'}),
-
+           
 
         }
 
