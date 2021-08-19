@@ -370,6 +370,12 @@ h6, .h6 {
   font-weight: 300;
   line-height: 1.2; }
 
+
+
+  .django-ckeditor-widget{
+  width: 100%;
+}
+
 hr {
   margin-top: 1rem;
   margin-bottom: 1rem;
@@ -2531,6 +2537,7 @@ input[type="button"].btn-block {
     .btn-group-vertical > .btn:active,
     .btn-group-vertical > .btn.active {
       z-index: 1; }
+
 
 .btn-toolbar {
   display: flex;

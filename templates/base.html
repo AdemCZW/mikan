@@ -17,7 +17,7 @@
     <link href="{% static 'assets/libs/chartist/dist/chartist.min.css' %}" rel="stylesheet">
     <link href="{% static 'assets/extra-libs/jvector/jquery-jvectormap-2.0.2.css' %}" rel="stylesheet">
     <!-- Custom CSS -->
-    <link href="{% static 'css/style.min.css' %}" rel="stylesheet">
+    <link href="{% static 'css/style.css' %}" rel="stylesheet">
 
     
   </head>
@@ -268,6 +268,13 @@
              format:'Y-m-d H:i',
           });
         });
+    </script>
+    <script>
+      setTimeout(function(){
+        for (let editor of document.getElementsByClassName('cke_browser_webkit')){
+          editor.style.width = '100%';
+        }
+      }, 500)
     </script>
   </body>
 </html>
