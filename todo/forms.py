@@ -1,5 +1,5 @@
 from django import forms
-from .models import Todo,Customer,Flight
+from .models import Customer,Flight,Index_001
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth.models import User
 from django.urls import reverse
@@ -8,14 +8,28 @@ from ckeditor.widgets import CKEditorWidget
 
 
 
-class TodoModelForm(forms.ModelForm):
+class IndexModelForm(forms.ModelForm):
     class Meta:
-        model = Todo
-        fields = ('title', 'name', 'finish')
+        model = Index_001
+        fields = ('mid_001','mid_002','mid_003','mid_004','mid_005','mid_006',
+                'mid_txt_001','mid_txt_002','mid_txt_003','mid_txt_004','mid_txt_005','mid_txt_006',
+            )
         widgets = {
-            'title': forms.TextInput(attrs={'class': 'form-control', 'placeholder': '待辦事項'}),
-            'name': forms.TextInput(attrs={'class': 'form-control', 'placeholder': '待辦事項'})
+            'mid_001': forms.TextInput(attrs={}),
+            'mid_002': forms.TextInput(attrs={}),
+            'mid_003': forms.TextInput(attrs={}),
+            'mid_004': forms.TextInput(attrs={}),
+            'mid_005': forms.TextInput(attrs={}),
+            'mid_006': forms.TextInput(attrs={}),
+            'mid_txt_001': forms.Textarea(attrs={'cols': 40,'row':20}),
+            'mid_txt_002': forms.Textarea(attrs={'cols': 40,'row':20}),
+            'mid_txt_003': forms.Textarea(attrs={'cols': 40,'row':20}),
+            'mid_txt_004': forms.Textarea(attrs={'cols': 40,'row':20}),
+            'mid_txt_005': forms.Textarea(attrs={'cols': 40,'row':20}),
+            'mid_txt_006': forms.Textarea(attrs={'cols': 40,'row':20}),
         }
+
+
 
 class FlightModelForm(forms.ModelForm):
     """docstring for FlightModelForm"""
@@ -30,11 +44,7 @@ class FlightModelForm(forms.ModelForm):
             'description': forms.TextInput(attrs={'class': 'form-control', 'rows': '4'}),
             'pd_number': forms.TextInput(attrs={'class': 'form-control', 'rows': '4'}),
             'pub_date': forms.TextInput(attrs={'class': 'form-control', 'rows': '4'}),
-           
-
         }
-
-
 
 class RegisterForm(UserCreationForm):
     username = forms.CharField(
