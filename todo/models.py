@@ -64,11 +64,10 @@ class Pt_001(models.Model):
 
 class at_001(models.Model):
     at_tit_001 = models.CharField(max_length=1000,default='標題')
-    at_ph_001 = models.CharField(max_length=1000,default='活動主照')
+    at_ph_001 = models.CharField(max_length=1000,default='活動圖照')
     at_con_001 = RichTextField(max_length=1000,default='活動內容',blank=True, null=True)
 
-    class Meta:
-        at_001 = "活動專區"
+
 
 
 
