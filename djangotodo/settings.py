@@ -27,7 +27,7 @@ DEBUG = True
 
 ALLOWED_HOSTS = [
 
-    'mikanwedding.herokuapp.com','127.0.0.1'
+    'mikanwedding.herokuapp.com','127.0.0.1','www.mikan.com.tw','mikan.com.tw'
 
 ]
 

@@ -20,8 +20,6 @@ app_name = 'todo'
 urlpatterns = [
     path('', WeddingListView.as_view(), name='list'),
     path('studio', StudioListView.as_view(), name='studio'),
-
-
     path('service', ServiceListView.as_view(), name='service'),
     path('price001', Price001ListView.as_view(), name='price001'),
     path('price002', Price002ListView.as_view(), name='price002'),
