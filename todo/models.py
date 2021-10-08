@@ -62,6 +62,14 @@ class Sg_001(models.Model):
 class Pt_001(models.Model):
     pt_ph_001 = models.CharField(max_length=1000,default='圖片連結')
 
+class at_001(models.Model):
+    at_tit_001 = models.CharField(max_length=1000,default='標題')
+    at_ph_001 = models.CharField(max_length=1000,default='活動主照')
+    at_con_001 = RichTextField(max_length=1000,default='活動內容',blank=True, null=True)
+
+
+
+
 
 class Flight(models.Model):
     items_choices = (

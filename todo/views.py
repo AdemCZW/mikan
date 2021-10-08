@@ -5,7 +5,7 @@ from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.decorators import login_required
 from django.utils.decorators import method_decorator
 from django.contrib import auth
-from .models import Member, Flight, Index_001, Pn_001, Price_003, Price_004, Studio_001, Service_001, Price_001, Price_002, Price_003, Price_004, Pn_001, Sg_001, Pf_001, Cp_001, Pt_001
+from .models import Member, Flight, Index_001, Pn_001, Price_003, Price_004, Studio_001, Service_001, Price_001, Price_002, Price_003, Price_004, Pn_001, Sg_001, Pf_001, Cp_001, Pt_001, at_001
 from .forms import FlightModelForm, IndexModelForm
 from django.contrib.auth.mixins import LoginRequiredMixin
 from .filters import FlightFilter
@@ -130,6 +130,14 @@ class WeddingMyListView(LoginRequiredMixin, ListView):
     model = Studio_001
     template_name = 'flight/studio.html'
 
+class AtListView(ListView):
+    model = at_001
+    template_name = 'flight/at-001.html'
+
+class AtDetailView(DetailView):
+    model = at_001
+    template_name = 'flight/at_detail.html'        
+
     
 
 class WeddingCreateView(CreateView):
@@ -141,6 +149,11 @@ class WeddingCreateView(CreateView):
     def form_valid(self, form):
         form.instance.user = self.request.user
         return super(WeddingCreateView, self).form_valid(form)
+
+
+
+   
+      
 
 class WeddingUpdateView(UpdateView):
     model = Index_001

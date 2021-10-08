@@ -10,7 +10,8 @@ from .views import (
     StudioListView,
     ServiceListView,
     Price001ListView,Price002ListView,Price003ListView,Price004ListView,
-    PnListView,SgListView,PfListView,CpListView,PtListView
+    PnListView,SgListView,PfListView,CpListView,PtListView,AtListView,
+    AtDetailView
 
 
 )
@@ -31,6 +32,9 @@ urlpatterns = [
     path('pf', PfListView.as_view(), name='pf'),
     path('cp', CpListView.as_view(), name='cp'),
     path('pt', PtListView.as_view(), name='pt'),
+    path('at', AtListView.as_view(), name='at'),
+    path('detail/<int:pk>', AtDetailView.as_view(), name='detail'),
+
 
     path('mylist', WeddingMyListView.as_view(), name='mylist'),
     path('create', WeddingCreateView.as_view(), name='create'),

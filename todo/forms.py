@@ -46,6 +46,9 @@ class FlightModelForm(forms.ModelForm):
             'pub_date': forms.TextInput(attrs={'class': 'form-control', 'rows': '4'}),
         }
 
+
+
+
 class RegisterForm(UserCreationForm):
     username = forms.CharField(
         label="帳號",
