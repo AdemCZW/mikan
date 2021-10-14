@@ -67,11 +67,20 @@ class at_001(models.Model):
     at_ph_001 = models.CharField(max_length=1000,default='活動圖照')
     at_con_001 = RichTextField(max_length=1000,default='活動內容',blank=True, null=True)
 
+class Wedding_01(models.Model):
+    Wedding_ph_001 = models.CharField(max_length=1000,default='圖片連結')
 
+class Wedding_02(models.Model):
+    Wedding_02_ph_001 = models.CharField(max_length=1000,default='圖片連結')
 
+class Wedding_03(models.Model):
+    Wedding_03_ph_001 = models.CharField(max_length=1000,default='圖片連結')
 
-
+class Wedding_04(models.Model):
+    Wedding_04_ph_001 = models.CharField(max_length=1000,default='圖片連結')  
+          
 class Flight(models.Model):
+
     items_choices = (
         ('tops', '衣服'),('pants','褲子'),('shoes','鞋子'),('accessories','配件'),('maintenance','保養品'),('makeup','化妝品'),
     )

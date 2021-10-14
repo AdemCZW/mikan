@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Customer,Flight,Index_001, Price_002,Studio_001,Service_001,Price_001, Price_002, Price_003, Price_004, Pn_001, Pf_001, Cp_001, Sg_001, Pt_001, at_001
+from .models import Customer,Flight,Index_001, Price_002,Studio_001,Service_001,Price_001, Price_002, Price_003, Price_004, Pn_001, Pf_001, Cp_001, Sg_001, Pt_001, at_001, Wedding_01, Wedding_02, Wedding_03, Wedding_04
 
 
 
@@ -83,7 +83,26 @@ class at001Admin(admin.ModelAdmin):
 
 admin.site.register(at_001)	
 
-	
+class Wedding001Admin(admin.ModelAdmin):
+	list_display = ('Wedding_ph_001')
+
+admin.site.register(Wedding_01)	
+
+class Wedding002Admin(admin.ModelAdmin):
+	list_display = ('Wedding_02_ph_001')
+
+admin.site.register(Wedding_02)	
+
+class Wedding003Admin(admin.ModelAdmin):
+	list_display = ('Wedding_03_ph_001')
+
+admin.site.register(Wedding_03)	
+
+class Wedding004Admin(admin.ModelAdmin):
+	list_display = ('Wedding_04_ph_001')
+
+admin.site.register(Wedding_04)	
+
 
 
 

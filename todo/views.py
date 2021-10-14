@@ -5,7 +5,7 @@ from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.decorators import login_required
 from django.utils.decorators import method_decorator
 from django.contrib import auth
-from .models import Member, Flight, Index_001, Pn_001, Price_003, Price_004, Studio_001, Service_001, Price_001, Price_002, Price_003, Price_004, Pn_001, Sg_001, Pf_001, Cp_001, Pt_001, at_001
+from .models import Member, Flight, Index_001, Pn_001, Price_003, Price_004, Studio_001, Service_001, Price_001, Price_002, Price_003, Price_004, Pn_001, Sg_001, Pf_001, Cp_001, Pt_001, at_001, Wedding_01, Wedding_02, Wedding_03, Wedding_04
 from .forms import FlightModelForm, IndexModelForm
 from django.contrib.auth.mixins import LoginRequiredMixin
 from .filters import FlightFilter
@@ -136,9 +136,24 @@ class AtListView(ListView):
 
 class AtDetailView(DetailView):
     model = at_001
-    template_name = 'flight/at_detail.html'        
+    template_name = 'flight/at_detail.html'    
 
-    
+class Wedding01ListView(ListView):
+    model = Wedding_01
+    template_name = 'flight/wedding.html'  # 樣板路徑 
+
+class Wedding02ListView(ListView):
+    model = Wedding_02
+    template_name = 'flight/wedding_02.html'  # 樣板路徑 
+                            
+class Wedding03ListView(ListView):
+    model = Wedding_03
+    template_name = 'flight/wedding_03.html'  # 樣板路徑 
+                            
+class Wedding04ListView(ListView):
+    model = Wedding_04
+    template_name = 'flight/wedding_04.html'  # 樣板路徑 
+                                
 
 class WeddingCreateView(CreateView):
     model = Index_001
