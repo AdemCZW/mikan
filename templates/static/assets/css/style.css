@@ -831,8 +831,9 @@ section {
 # Hero Section
 --------------------------------------------------------------*/
 .hero-section {
-  background: linear-gradient(to right, rgba(39, 70, 133,0.8) 0%, rgba(61, 179, 197, 0) 100%), url(../img/007.png);
+  background: linear-gradient(to right, rgba(39, 70, 133,0.8) 0%, rgba(61, 179, 197, 0) 100%), url(../img/007.jpg);
   position: relative;
+  background-position: center;
 }
 
 .hero-section .wave {
