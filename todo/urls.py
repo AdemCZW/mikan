@@ -44,6 +44,4 @@ urlpatterns = [
     path('update/<int:pk>', WeddingUpdateView.as_view(), name='update'),
     path('delete/<int:pk>', WeddingDeleteView.as_view(), name='delete'),
     path('detail/<int:pk>', WeddingDetailView.as_view(), name='detail'),
-   
-
 ]

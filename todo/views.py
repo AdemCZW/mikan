@@ -57,24 +57,6 @@ class FlightCreateView(CreateView):
     def form_valid(self, form):
         form.instance.user = self.request.user
         return super(FlightCreateView, self).form_valid(form)
-
-class FlightUpdateView(UpdateView):
-    model = Flight
-    form_class = FlightModelForm  # 使用的表單類別
-    template_name = 'flight/flight_update.html'  # 修改樣板
-    success_url = '/flight/mylist'  # 儲存成功後要導向的網址
-
-class FlightDeleteView(DeleteView):
-    model = Flight
-    template_name = 'flight/flight_delete.html'  # 刪除樣板
-    success_url = '/flight/mylist'  # 刪除成功後要導向的網址
-
-class FlightDetailView(DetailView):
-    model = Flight
-    template_name = 'flight/flight_detail.html'    
-
-
-
 #wedding
 
 class WeddingListView(ListView):
@@ -163,12 +145,7 @@ class WeddingCreateView(CreateView):
 
     def form_valid(self, form):
         form.instance.user = self.request.user
-        return super(WeddingCreateView, self).form_valid(form)
-
-
-
-   
-      
+        return super(WeddingCreateView, self).form_valid(form)      
 
 class WeddingUpdateView(UpdateView):
     model = Index_001
@@ -217,7 +194,7 @@ def sign_in(request):
         user = authenticate(request, username=username, password=password)
         if user is not None:
             login(request, user)
-            return redirect('/flight')  #重新導向到首頁
+            return redirect('/wedding')  #重新導向到首頁
     context = {
         'form': form
 
