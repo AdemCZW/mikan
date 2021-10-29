@@ -20,7 +20,7 @@ from django.views.generic import (
 
 
 class FlightListView(ListView):
-    model = Flight
+    model = Index_001
     queryset = Flight.objects.filter(finish=False)  # 指定查詢條件
     template_name = 'flight/flight_main.html'  # 樣板路徑
 
@@ -36,21 +36,18 @@ class FlightListView(ListView):
    
 
 class FlightMyListView(LoginRequiredMixin, ListView):
-    model = Flight
+    model = Index_001
     template_name = 'flight/flight_self.html'
-
-    def get_queryset(self):
-        return Flight.objects.filter(user=self.request.user)
 
     # 要傳遞的資料
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
-        context["form"] = FlightModelForm()  # 資料模型表單
+        context["form"] = IndexModelForm()  # 資料模型表單
         return context    
 
 class FlightCreateView(CreateView):
-    model = Flight
-    form_class = FlightModelForm  # 使用的表單類別
+    model = Index_001
+    form_class = IndexModelForm   #使用的表單類別
 
     success_url = '/flight/mylist'  # 儲存成功後要導向的網址
 
@@ -110,7 +107,7 @@ class PtListView(ListView):
 
 class WeddingMyListView(LoginRequiredMixin, ListView):
     model = Studio_001
-    template_name = 'flight/studio.html'
+    template_name = 'flight/flight_list.html'
 
 class AtListView(ListView):
     model = at_001
@@ -150,16 +147,23 @@ class WeddingCreateView(CreateView):
 class WeddingUpdateView(UpdateView):
     model = Index_001
     form_class = IndexModelForm  # 使用的表單類別
+    queryset = Index_001.objects.all() # 這很重要
     template_name = 'flight/flight_update.html'  # 修改樣板
     success_url = '/flight/mylist'  # 儲存成功後要導向的網址
+
+    def get(self, request, *args, **kwargs):
+        self.object = self.get_object()
+        return super().get(request, *args, **kwargs)
+
+    def post(self, request, *args, **kwargs):
+        self.object = self.get_object()
+        return super().post(request, *args, **kwargs)
 
 
 class WeddingDeleteView(DeleteView):
     model = Index_001
     template_name = 'flight/flight_delete.html'  # 刪除樣板
     success_url = '/flight/mylist'  # 刪除成功後要導向的網址
-
-
 
 class WeddingDetailView(DetailView):
     model = Index_001
@@ -168,7 +172,6 @@ class WeddingDetailView(DetailView):
 
 
 
-# 首頁
 @login_required(login_url="Login")
 def index(request):
     return render(request, 'index.html')
@@ -194,7 +197,7 @@ def sign_in(request):
         user = authenticate(request, username=username, password=password)
         if user is not None:
             login(request, user)
-            return redirect('/wedding')  #重新導向到首頁
+            return redirect('/mylist')  #重新導向到首頁
     context = {
         'form': form
 
@@ -205,7 +208,6 @@ def sign_in(request):
 def log_out(request):
     logout(request)
     return redirect('/login') #重新導向到登入畫面
-
 
 
 

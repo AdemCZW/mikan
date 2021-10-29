@@ -1,0 +1,172 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    {% load static %}
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- Tell the browser to be responsive to screen width -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="橘攝婚紗攝影在創立時，就以區隔化市場策略進入寫真市場經營，不同於其他同業大同小異之商品風格，獨家以廣告風格MV拍攝手法，迎領流行時尚趨勢的風格。">
+    <meta name="keywords" content="婚紗攝影 日系婚紗 歐式婚紗 韓式婚紗 攝影 海外攝影 外景攝影 棚內攝影 台北 台中 高雄">
+    <meta name="author" content="">
+    <meta property="og:image" content="{% static 'assets/img/500.png' %}" /> 
+    <!-- Favicon icon -->
+    <link rel="icon" type="image/png" sizes="16x16" href="{% static 'assets/img/favicon.png' %}">
+    <title>MIKAN</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+    <link rel="icon" href="{% static 'assets/img/favicon.png' %}" type="image/ico" />
+
+      <!-- Vendor CSS Files -->
+    <link href="{% static 'assets/vendor/aos/aos.css' %}" rel="stylesheet">
+    <link href="{% static 'assets/vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+    <link href="{% static 'assets/vendor/bootstrap-icons/bootstrap-icons.css' %}" rel="stylesheet">
+    <link href="{% static 'assets/vendor/boxicons/css/boxicons.min.css' %}" rel="stylesheet">
+    <link href="{% static 'assets/vendor/swiper/swiper-bundle.min.css' %}" rel="stylesheet">
+    <!-- Template Main CSS File -->
+    <link href="{% static 'assets/css/style.css' %}" rel="stylesheet">
+  </head>
+  <body>
+    <header id="header" class="fixed-top d-flex align-items-center " style="background: rgb(233 30 99 / 70%);
+height: 60px;">
+    <div class="container d-flex justify-content-between align-items-center">
+
+      <div class="logo">
+        <h1><a href="/flight">MIKAN</a></h1>
+        <!-- Uncomment below if you prefer to use an image logo -->
+        <!-- <a href="index.html"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+      </div>
+
+      <nav id="navbar" class="navbar" style="font-family: 'Poppins', sans-serif !important;">
+        <ul>
+          <li><a class="active " href="/flight">首頁</a></li>
+          <li><a href="/flight/studio">攝影棚</a></li>
+
+          
+          
+          <li class="dropdown"><a href="#"><span>婚紗攝影</span> <i class="bi bi-chevron-down"></i></a>
+            <ul>
+              <li><a href="/flight/wed-01">古裝婚紗</a></li>
+              <li><a href="/flight/wed-02">景點婚紗</a></li>
+              <li><a href="/flight/wed-03">摩登婚紗</a></li>
+              <li><a href="/flight/wed-04">韓系婚紗</a></li>
+            </ul>
+          </li>
+          <li class="dropdown"><a href="#"><span>攝影作品</span> <i class="bi bi-chevron-down"></i></a>
+            <ul>
+              <li><a href="/flight/pn">孕婦攝影</a></li>
+              <li><a href="/flight/pf">專業形象照</a></li>
+              <li><a href="/flight/cp">情侶寫真</a></li>
+              <li><a href="/flight/sg">單身婚紗</a></li>
+              <li><a href="/flight/pt">寵物婚紗</a></li>
+            </ul>
+          </li>
+          <li class="dropdown"><a href="#"><span>服務內容</span> <i class="bi bi-chevron-down"></i></a>
+            <ul>
+              
+              <li><a href="/flight/service">服務流程</a></li>
+              <li><a href="/flight/price001">婚紗單拍</a></li>
+              <li><a href="/flight/price004">婚紗包套</a></li>
+              <li><a href="#">情侶寫真</a></li>
+              <li><a href="/flight/price002">孕婦寫真</a></li>
+              <li><a href="#">寶寶寫真</a></li>
+              <li><a href="/flight/price003">同志寫真｜同性婚紗</a></li>
+              <li><a href="#">個人寫真｜單身婚紗</a></li>
+              <li><a href="#">全家福｜週年寫真</a></li>
+              <li><a href="#">海外專案</a></li>
+            </ul>
+          </li>
+          <li class="dropdown"><a href="#"><span>禮服專區</span> <i class="bi bi-chevron-down"></i></a>
+            <ul>
+              <li><a href="#">白紗</a></li>
+              <li><a href="wed-dress.html">晚禮服</a></li>
+            </ul>
+          </li>
+          <li><a href="/flight/at">活動專區</a></li>
+          <li><a href="#">婚禮專欄</a></li>
+          <li><a href="features.html">婚禮表單</a></li>
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav><!-- .navbar -->
+
+    </div>
+  </header><!-- End Header -->
+      <div style="height: 100px;width: 100%;"></div>
+            <div class="container-fluid">
+    
+        {% block content %}
+        {% endblock  %}
+
+   <!-- ======= Testimonials Section ======= -->
+    
+    <section class="section">
+
+      <div class="container">
+
+        <div class="row">
+          
+          <div class="col-lg-4 d-inline-flex">
+            <div class="col-6 box-005">
+            <p><a href="https://mikan.com.tw/"><img src="{% static 'assets/img/001.png' %}"></a>
+             </div> 
+             <div class="col-6 box-005">
+            <p><a href="https://www.facebook.com/mikanbaby/?ref=pages_you_manage&locale=zh_TW"><img src="{% static 'assets/img/002.png' %}"></a>
+             </div> 
+          </div>
+
+          <div class="col-lg-4 d-inline-flex">
+            <div class="col-6 box-005">
+            <p><a href="https://www.facebook.com/mikankids?locale=zh_TW"><img src="{% static 'assets/img/003.png' %}"></a>
+             </div> 
+             <div class="col-6 box-005">
+            <p><a href="https://www.facebook.com/VeronaBrideHuang?locale=zh_TW"><img src="{% static 'assets/img/004.png' %}"></a>
+             </div> 
+          </div>
+
+          <div class="col-lg-4 d-inline-flex">
+            <div class="col-6 box-005">
+            <p><a href="https://www.facebook.com/MikanWedding"><img src="{% static 'assets/img/005.png' %}"></a>
+             </div> 
+             <div class="col-6 box-005">
+            <p><a href="https://www.facebook.com/shotdogs?locale=zh_TW"><img src="{% static 'assets/img/006.png' %}"></a>
+             </div> 
+          </div>
+          
+        </div>
+      </div>
+
+    </section>
+
+
+    <!-- ======= Footer ======= -->
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+
+     <!-- Vendor JS Files -->
+     <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+      <script src="{% static 'assets/vendor/aos/aos.js' %}"></script>
+      <script src="{% static 'assets/vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+      <script src="{% static 'assets/vendor/php-email-form/validate.js' %}"></script>
+      <script src="{% static 'assets/vendor/swiper/swiper-bundle.min.js' %}"></script>
+
+      <!-- Template Main JS File -->
+      <script src="{% static 'assets/js/vendor/jquery-1.10.2.min.js' %}"></script>
+      <script src="{% static 'assets/js/main.js' %}"></script>
+      <script src="{% static 'assets/js/min/plugins.min.js' %}"></script>
+      <script src="{% static 'assets/js/min/main.min.js' %}"></script>
+      <script src="{% static 'assets/js/vendor/modernizr-2.6.2.min.js' %}"></script>
+      <script type="text/javascript">
+            //<![CDATA[
+            $(window).load(function() { // makes sure the whole site is loaded
+                $('#loader').fadeOut(); // will first fade out the loading animation
+                    $('#loader-wrapper').delay(350).fadeOut('slow'); // will fade out the white DIV that covers the website.
+                $('body').delay(350).css({'overflow-y':'visible'});
+            })
+            //]]>
+        </script>
+      
+
+  </body>
+</html>

@@ -11,22 +11,32 @@ from ckeditor.widgets import CKEditorWidget
 class IndexModelForm(forms.ModelForm):
     class Meta:
         model = Index_001
-        fields = ('mid_001','mid_002','mid_003','mid_004','mid_005','mid_006',
-                'mid_txt_001','mid_txt_002','mid_txt_003','mid_txt_004','mid_txt_005','mid_txt_006',
+        fields = ('mid_001','mid_txt_001','mid_ph_001','mid_002','mid_txt_002','mid_ph_002',
+            'mid_003','mid_txt_003','mid_ph_003','mid_004','mid_txt_004','mid_ph_004',
+            'mid_005','mid_txt_005','mid_ph_005','mid_006','mid_txt_006','mid_ph_006',
+
             )
         widgets = {
             'mid_001': forms.TextInput(attrs={}),
+            'mid_txt_001': forms.Textarea(attrs={'cols': 40,'row':10}),
             'mid_002': forms.TextInput(attrs={}),
+            'mid_txt_002': forms.Textarea(attrs={'cols': 40,'row':10}),
             'mid_003': forms.TextInput(attrs={}),
+            'mid_txt_003': forms.Textarea(attrs={'cols': 40,'row':10}),
             'mid_004': forms.TextInput(attrs={}),
+            'mid_txt_004': forms.Textarea(attrs={'cols': 40,'row':10}),
             'mid_005': forms.TextInput(attrs={}),
+            'mid_txt_005': forms.Textarea(attrs={'cols': 40,'row':10}),
             'mid_006': forms.TextInput(attrs={}),
-            'mid_txt_001': forms.Textarea(attrs={'cols': 40,'row':20}),
-            'mid_txt_002': forms.Textarea(attrs={'cols': 40,'row':20}),
-            'mid_txt_003': forms.Textarea(attrs={'cols': 40,'row':20}),
-            'mid_txt_004': forms.Textarea(attrs={'cols': 40,'row':20}),
-            'mid_txt_005': forms.Textarea(attrs={'cols': 40,'row':20}),
-            'mid_txt_006': forms.Textarea(attrs={'cols': 40,'row':20}),
+            'mid_txt_006': forms.Textarea(attrs={'cols': 40,'row':10}),
+        }
+        labels = {
+            'mid_001':'標題名稱',
+            'mid_002':'標題名稱',
+            'mid_003':'標題名稱',
+            'mid_004':'標題名稱',
+            'mid_005':'標題名稱',
+            'mid_006':'標題名稱',
         }
 
 
@@ -45,8 +55,6 @@ class FlightModelForm(forms.ModelForm):
             'pd_number': forms.TextInput(attrs={'class': 'form-control', 'rows': '4'}),
             'pub_date': forms.TextInput(attrs={'class': 'form-control', 'rows': '4'}),
         }
-
-
 
 
 class RegisterForm(UserCreationForm):

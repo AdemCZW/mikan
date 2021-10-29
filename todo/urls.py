@@ -1,6 +1,7 @@
 from django.urls import path
 from .views import (
-   
+    FlightCreateView,
+    FlightMyListView,
     WeddingListView,
     WeddingCreateView,
     WeddingUpdateView,
@@ -39,8 +40,8 @@ urlpatterns = [
     path('wed-04', Wedding04ListView.as_view(), name='wed-04'),
 
 
-    path('mylist', WeddingMyListView.as_view(), name='mylist'),
-    path('create', WeddingCreateView.as_view(), name='create'),
+    path('mylist', FlightMyListView.as_view(), name='mylist'),
+    path('create', FlightCreateView.as_view(), name='create'),
     path('update/<int:pk>', WeddingUpdateView.as_view(), name='update'),
     path('delete/<int:pk>', WeddingDeleteView.as_view(), name='delete'),
     path('detail/<int:pk>', WeddingDetailView.as_view(), name='detail'),
