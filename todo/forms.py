@@ -30,15 +30,7 @@ class IndexModelForm(forms.ModelForm):
             'mid_006': forms.TextInput(attrs={}),
             'mid_txt_006': forms.Textarea(attrs={'cols': 40,'row':10}),
         }
-        labels = {
-            'mid_001':'標題名稱',
-            'mid_002':'標題名稱',
-            'mid_003':'標題名稱',
-            'mid_004':'標題名稱',
-            'mid_005':'標題名稱',
-            'mid_006':'標題名稱',
-        }
-
+       
 
 
 class FlightModelForm(forms.ModelForm):
