@@ -15,21 +15,19 @@ Including another URLconf
 """
 
 from django.urls import path, include
-from todo.views import index, sign_up, sign_in, log_out
 from django.contrib.auth import views
 from django.contrib import admin  
 from todo import views
+from shotdogs import views
+
 
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('todo.urls')),
     path('index/', include('todo.urls')),
-    path('register/', views.sign_up, name='Register'),
-    path('login/', views.sign_in, name='Login'),
-    path('logout/', views.log_out, name='Logout'),
     path('flight/', include('todo.urls')),
     path('wedding/', include('todo.urls')),
-
+    path('shotdog/', include('shotdogs.urls')),
 ]
 

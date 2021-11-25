@@ -1,0 +1,151 @@
+{% extends 'shotdogs.html' %}
+{% block content %}
+
+  <!-- ======= Hero Section ======= -->
+  <section id="hero" class="d-flex justify-cntent-center align-items-center">
+    <div id="heroCarousel" class="container carousel carousel-fade" data-bs-ride="carousel" data-bs-interval="5000">
+ {% load static %}
+      <!-- Slide 1 -->
+      {% csrf_token %}
+      {% for shotdogs in object_list %} 
+      <div class="carousel-item active">
+        <div class="carousel-container">
+         
+            <div class="loop-001">
+              <img src="{{ shotdogs.mid_ph_001 }}">
+            </div>
+        </div>
+      </div>
+
+      <!-- Slide 2 -->
+      <div class="carousel-item">
+        <div class="carousel-container">
+          
+          <div class="loop-001">
+              <img src="{{ shotdogs.mid_ph_002 }}">
+            </div>
+        </div>
+      </div>
+
+      <!-- Slide 3 -->
+      <div class="carousel-item">
+        <div class="carousel-container">
+          
+          <div class="loop-001">
+              <img src="{{ shotdogs.mid_ph_003 }}">
+            </div>
+        </div>
+      </div>
+
+      <a class="carousel-control-prev" href="#heroCarousel" role="button" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon bx bx-chevron-left" aria-hidden="true"></span>
+      </a>
+
+      <a class="carousel-control-next" href="#heroCarousel" role="button" data-bs-slide="next">
+        <span class="carousel-control-next-icon bx bx-chevron-right" aria-hidden="true"></span>
+      </a>
+
+    </div>
+  </section><!-- End Hero -->
+
+  <main id="main">
+
+    
+{% endfor %}
+    <!-- ======= Why Us Section ======= -->
+    <section class="why-us section-bg" data-aos="fade-up" date-aos-delay="200">
+      <div class="container">
+
+        <div class="row">
+          <div class="col-lg-7 video-box">
+            <img src="{% static 'dog/assets/img/about01.jpg' %}" class="img-fluid" alt="">
+            <!-- youtube
+              <a href="https://www.youtube.com/watch?v=jDDaplaOz7Q" class="venobox play-btn mb-4" data-vbtype="video" data-autoplay="true"></a
+              >-->
+          </div>
+
+          <div class="col-lg-5 d-flex flex-column justify-content-center p-5">
+
+            <div class="icon-box">
+              
+              <h4 class="title"><a href="">攝狗狗品牌故事</a></h4>
+              <p class="description">
+                ShotDogs廣告寫真創立於2002年4月，開店概念來自於一隻流浪狗妞妞。憑著捕捉寶貝每一瞬間精采回憶的這份熱情，創立了全台灣第一家為寵物專門攝影的寫真公司。<br><br>
+                2004年開始，ShotDogs發展路線拓展至全方位領域專業攝影。店面規模也由原地下一樓擴大至八德路店面。為了維持ShotDogs追求一致的品質，所有的攝影師、人員篩選訓練、場景設計、產品設計、整體包裝、製作都是統籌由台北總店規劃與執行，其中唯一不變的信仰只有對於”專業”與”服務”的堅持，並永續延續下去。 顯示較少內容
+              </p>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </section><!-- End Why Us Section -->
+
+    <!-- ======= Features Section ======= -->
+    <section class="features">
+      <div class="container">
+
+        <div class="section-title">
+          <h2>服務項目</h2>
+          
+        </div>
+
+        <div class="row" data-aos="fade-up">
+          <div class="col-md-5">
+            <img src="{% static 'dog/assets/img/index-02.jpg' %}" class="img-fluid" alt="">
+          </div>
+          <div class="col-md-7 pt-4">
+            <h3>親子拍攝</h3>
+            <p class="fst-italic">
+              文字內容
+            </p>
+            
+          </div>
+        </div>
+
+        <div class="row" data-aos="fade-up">
+          <div class="col-md-5 order-1 order-md-2">
+            <img src="{% static 'dog/assets/img/index-04.jpg' %}" class="img-fluid" alt="">
+          </div>
+          <div class="col-md-7 pt-5 order-2 order-md-1">
+            <h3>戶外拍攝</h3>
+            <p class="fst-italic">
+              文字內容
+            </p>
+            
+          </div>
+        </div>
+
+        <div class="row" data-aos="fade-up">
+          <div class="col-md-5">
+            <img src="{% static 'dog/assets/img/index-03.jpg' %}" class="img-fluid" alt="">
+          </div>
+          <div class="col-md-7 pt-5">
+            <h3>特殊服裝</h3>
+            <p>文字內容</p>
+            <ul>
+              
+            </ul>
+          </div>
+        </div>
+
+        <div class="row" data-aos="fade-up">
+          <div class="col-md-5 order-1 order-md-2">
+            <img src="{% static 'dog/assets/img/index-01.jpg' %}" class="img-fluid" alt="">
+          </div>
+          <div class="col-md-7 pt-5 order-2 order-md-1">
+            <h3>室內影棚</h3>
+            <p class="fst-italic">
+              文字內容
+            </p>
+            
+          </div>
+        </div>
+
+      </div>
+    </section><!-- End Features Section -->
+    
+  </main><!-- End #main -->
+
+  
+{% endblock  %}

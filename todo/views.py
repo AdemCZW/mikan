@@ -1,7 +1,7 @@
 from django.shortcuts import render, redirect, HttpResponseRedirect
 from django.contrib.auth.forms import UserCreationForm
 from .forms import RegisterForm, LoginForm, CustomerModelForm
-from django.contrib.auth import authenticate, login, logout
+from django.contrib.auth import authenticate
 from django.contrib.auth.decorators import login_required
 from django.utils.decorators import method_decorator
 from django.contrib import auth
@@ -168,48 +168,6 @@ class WeddingDeleteView(DeleteView):
 class WeddingDetailView(DetailView):
     model = Index_001
     template_name = 'flight/flight_detail.html'    
-
-
-
-
-@login_required(login_url="Login")
-def index(request):
-    return render(request, 'index.html')
-#註冊
-def sign_up(request):
-    form = RegisterForm()
-    if request.method == "POST":
-        form = RegisterForm(request.POST)
-        if form.is_valid():
-            form.save()
-            return redirect('/login')  #重新導向到登入畫面
-    context = {
-        'form': form
-    }
-    return render(request, 'register.html', context)
-
-#登入
-def sign_in(request):
-    form = LoginForm()
-    if request.method == "POST":
-        username = request.POST.get("username")
-        password = request.POST.get("password")
-        user = authenticate(request, username=username, password=password)
-        if user is not None:
-            login(request, user)
-            return redirect('/mylist')  #重新導向到首頁
-    context = {
-        'form': form
-
-    }
-    return render(request, 'login.html', context)
-
-# 登出
-def log_out(request):
-    logout(request)
-    return redirect('/login') #重新導向到登入畫面
-
-
 
 
 

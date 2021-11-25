@@ -44,6 +44,7 @@ INSTALLED_APPS = [
     'todo.apps.TodoConfig',
     'django_filters',
     'ckeditor',
+    'shotdogs',
 ]
 
 MIDDLEWARE = [
