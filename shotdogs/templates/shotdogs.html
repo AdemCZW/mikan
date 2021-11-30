@@ -56,7 +56,7 @@
           <li><a href="/shotdog">首頁</a></li>
           <li class="dropdown"><a href="#"><span>服務項目</span> <i class="bi bi-chevron-down"></i></a>
             <ul>
-              <li><a href="#">寵物攝影套裝</a></li>
+              <li><a href="/shotdog/price">寵物攝影套裝</a></li>
             </ul>
           </li>
           <li><a href="/shotdog/photo"><span>拍攝風格</span></a>
@@ -194,6 +194,33 @@
 
   <!-- Template Main JS File -->
   <script src="{% static 'dog/assets/js/main.js' %}"></script>
+  <!-- Messenger 洽談外掛程式 Code -->
+    <div id="fb-root"></div>
+
+    <!-- Your 洽談外掛程式 code -->
+    <div id="fb-customer-chat" class="fb-customerchat">
+    </div>
+
+    <script>
+      var chatbox = document.getElementById('fb-customer-chat');
+      chatbox.setAttribute("page_id", "305919366167492");
+      chatbox.setAttribute("attribution", "biz_inbox");
+
+      window.fbAsyncInit = function() {
+        FB.init({
+          xfbml            : true,
+          version          : 'v12.0'
+        });
+      };
+
+      (function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.src = 'https://connect.facebook.net/zh_TW/sdk/xfbml.customerchat.js';
+        fjs.parentNode.insertBefore(js, fjs);
+      }(document, 'script', 'facebook-jssdk'));
+    </script>
 
 </body>
 

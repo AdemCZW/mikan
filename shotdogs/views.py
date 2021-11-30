@@ -3,7 +3,7 @@ from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth import authenticate
 from django.utils.decorators import method_decorator
 from django.contrib import auth
-from .models import Shotdogs_photo, Home
+from .models import Shotdogs_photo, Home, Price
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.views.generic import (
     ListView,
@@ -22,6 +22,10 @@ class PhotoAllListView(ListView):
 class HomeAllListView(ListView):
     model = Home
     template_name = 'home.html'  # 樣板路徑    
+
+class Price_001_ListView(ListView):
+    model = Price
+    template_name = 'price.html'  # 樣板路徑    
 
 
 
