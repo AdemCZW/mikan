@@ -80,6 +80,18 @@ class Price(models.Model):
 		verbose_name_plural = "攝狗狗-套裝"
 		verbose_name = "攝狗狗-套裝"
 
+class article(models.Model):
+    atc_tit_001 = models.CharField(max_length=1000,verbose_name = '文章標題', blank=True )
+    atc_ph_001 = models.CharField(max_length=1000,verbose_name = '文張照片', blank=True )
+    atc_con_001 = RichTextField(max_length=10000,default='輸入',blank=True, null=True,verbose_name = '內容')
+
+    def __str__(self):
+        return "攝狗狗-文章專區" + str(self.id) + " 號 "
+
+    class Meta:
+        verbose_name_plural = "攝狗狗-文章"
+        verbose_name = "攝狗狗-文章"
+        
 
 
 

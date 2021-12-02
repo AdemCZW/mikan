@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Shotdogs_photo, Home, Price
+from .models import Shotdogs_photo, Home, Price, article
 # Register your models here.
 class Shotdogs_photoAdmin(admin.ModelAdmin):
 	list_display = ()
@@ -16,3 +16,7 @@ class Shotdogs_priceAdmin(admin.ModelAdmin):
 
 admin.site.register(Price)	
 
+class Shotdogs_articleAdmin(admin.ModelAdmin):
+	list_display = ()
+
+admin.site.register(article)	
