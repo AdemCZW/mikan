@@ -17,8 +17,6 @@ from django.views.generic import (
     DetailView
 )
 
-
-
 class FlightListView(ListView):
     model = Index_001
     queryset = Flight.objects.filter(finish=False)  # 指定查詢條件

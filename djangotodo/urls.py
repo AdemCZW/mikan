@@ -19,6 +19,7 @@ from django.contrib.auth import views
 from django.contrib import admin  
 from todo import views
 from shotdogs import views
+from veronahuang import views
 
 
 
@@ -29,5 +30,6 @@ urlpatterns = [
     path('flight/', include('todo.urls')),
     path('wedding/', include('todo.urls')),
     path('shotdog/', include('shotdogs.urls')),
+    path('verona/', include('veronahuang.urls')),
 ]
 
