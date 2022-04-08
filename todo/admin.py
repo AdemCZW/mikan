@@ -3,15 +3,6 @@ from .models import Customer,Flight,Index_001, Price_002,Studio_001,Service_001,
 
 
 
-class CustomerAdmin(admin.ModelAdmin):
-    list_display = ('id', 'name', 'email', 'tel')  # 顯示欄位
-admin.site.register(Customer, CustomerAdmin)  # 加入至Administration(管理員後台)
-
-class FlightAdmin(admin.ModelAdmin):
-	list_display = ('user', 'items', 'fromname', 'description', 'finish',  'pd_number', 'pd_content', 'pub_date')
-		
-admin.site.register(Flight)
-
 class IndexAdmin(admin.ModelAdmin):
 	list_display = ('mid_001','mid_002','mid_003','mid_004','mid_005','mid_006',
 					'mid_txt_001','mid_txt_002','mid_txt_003','mid_txt_004','mid_txt_005','mid_txt_006'
