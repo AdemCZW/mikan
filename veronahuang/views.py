@@ -29,33 +29,33 @@ class vh_style_001_ListView(ListView):
 
 class vh_style_002_ListView(ListView):
     model = vh_style_002
-    template_name = 'article.html'  # 樣板路徑   
+    template_name = 'style-002.html'  # 樣板路徑   
 
 class vh_style_003_ListView(ListView):
     model = vh_style_003
-    template_name = 'price.html'  # 樣板路徑    
+    template_name = 'style-003.html'  # 樣板路徑    
 
 class vh_style_004_ListView(ListView):
     model = vh_style_004
-    template_name = 'article.html'  # 樣板路徑    
+    template_name = 'style-004.html'  # 樣板路徑    
 
 class vh_style_005_ListView(ListView):
     model = vh_style_005
-    template_name = 'price.html'  # 樣板路徑    
+    template_name = 'style-005.html'  # 樣板路徑    
 
 class vh_style_006_ListView(ListView):
     model = vh_style_006
-    template_name = 'article.html'  # 樣板路徑    
+    template_name = 'style-006.html'  # 樣板路徑    
 
 class vh_big_frds_ListView(ListView):
     model = vh_big_frds
-    template_name = 'article.html'  # 樣板路徑    
+    template_name = 'big_frds.html'  # 樣板路徑    
 
 class vh_big_cpl_ListView(ListView):
     model = vh_big_cpl
-    template_name = 'price.html'  # 樣板路徑    
+    template_name = 'big_cpl.html'  # 樣板路徑    
 
 class vh_big_single_ListView(ListView):
     model = vh_big_single
-    template_name = 'article.html'  # 樣板路徑    
+    template_name = 'big_single.html'  # 樣板路徑    
 # Create your views here.
