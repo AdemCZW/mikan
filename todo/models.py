@@ -42,7 +42,11 @@ class Studio_001(models.Model):
         verbose_name = '攝影棚圖片'
 
 class Service_001(models.Model):
-    service_ph_001 = models.CharField(max_length=1000,default='圖片連結')    
+    service_ph_001 = models.CharField(max_length=1000,default='圖片連結')  
+
+    class Meta:
+        verbose_name_plural = '服務流程'
+        verbose_name = '服務流程'  
 
 class Price_001(models.Model):
     price_btn_001 = models.CharField(max_length=1000,default='',verbose_name = '選項名稱') 
