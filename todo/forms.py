@@ -11,7 +11,7 @@ from ckeditor.widgets import CKEditorWidget
 class IndexModelForm(forms.ModelForm):
     class Meta:
         model = Index_001
-        fields = ('mid_001','mid_txt_001','mid_ph_001','mid_002','mid_txt_002','mid_ph_002',
+        fields = ('mid_ph_010','mid_ph_011','mid_ph_012','mid_001','mid_txt_001','mid_ph_001','mid_002','mid_txt_002','mid_ph_002',
             'mid_003','mid_txt_003','mid_ph_003','mid_004','mid_txt_004','mid_ph_004',
             'mid_005','mid_txt_005','mid_ph_005','mid_006','mid_txt_006','mid_ph_006',
 

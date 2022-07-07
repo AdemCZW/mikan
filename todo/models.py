@@ -5,6 +5,9 @@ from ckeditor.fields import RichTextField
 
 
 class Index_001(models.Model):
+    mid_ph_010 = models.CharField(max_length=1000,null=True,verbose_name = '左直')
+    mid_ph_011 = models.CharField(max_length=1000,null=True,verbose_name = '右上')
+    mid_ph_012 = models.CharField(max_length=1000,null=True,verbose_name = '右下')
     mid_001 = models.CharField(max_length=10,verbose_name = '標題名稱')
     mid_ph_001 = models.CharField(max_length=1000,null=True,verbose_name = '照片連結')
     mid_txt_001 = models.TextField(max_length=100,verbose_name = '內容')

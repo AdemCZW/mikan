@@ -42,23 +42,24 @@
 
       <div class="container">
         {% load static %}
-
+         {% csrf_token %}
+            {% for todo in object_list %}   
         <div class="row">
           <div class="col-lg-6 col-md-12">
             <div class="step box-001">
-              <img src="{% static 'assets/img/010.jpg' %}">
+              <img src="{{ todo.mid_ph_010 }}">
 
             </div>
           </div>
           <div class="col-lg-6">
           <div class="col-12">
             <div class="step box-002">
-              <img src="{% static 'assets/img/011.jpg' %}">
+              <img src="{{ todo.mid_ph_011 }}">
             </div>
           </div>
           <div class="col-12">
             <div class="step box-002">
-              <img src="{% static 'assets/img/012.jpg' %}">   
+              <img src="{{ todo.mid_ph_012 }}">   
             </div>
           </div>
           </div>
@@ -72,8 +73,7 @@
     <div class="site-section">
         <div class="container">
           <div class="row justify-content-center text-center mb-4">
-           {% csrf_token %}
-            {% for todo in object_list %}   
+          
     
           </div>
           <div class="row">
