@@ -50,12 +50,14 @@
         <ul>
           <li><a href="/flight">首頁</a></li>
           <li><a href="/flight/studio">攝影棚</a></li>
+          <li><a href="/flight/location">攝影景點</a></li>
           <li class="dropdown"><a href="#"><span>婚紗攝影</span> <i class="bi bi-chevron-down"></i></a>
             <ul>
               <li><a href="/flight/wed-01">古裝婚紗</a></li>
               <li><a href="/flight/wed-02">景點婚紗</a></li>
               <li><a href="/flight/wed-03">摩登婚紗</a></li>
               <li><a href="/flight/wed-04">韓系婚紗</a></li>
+              <li><a href="/flight/castle">古堡婚紗</a></li>
             </ul>
           </li>
           <li class="dropdown"><a href="#"><span>攝影作品</span> <i class="bi bi-chevron-down"></i></a>
@@ -149,7 +151,9 @@
       <div class="row">
         <div class="col-md-4 mb-4 mb-md-0">
           <h3>關於我們</h3>
-          <p>橘攝婚紗攝影在創立時，就以區隔化市場策略進入寫真市場經 營，不同於其他同業大同小異之商品風格，獨家以廣告風格MV拍攝手法，迎領流行時尚趨勢的風格。<br><br>獨特的攝影手法與堅強的設計團隊，媒體爭相採訪報導錄製，並提供攝影棚拍攝現場節目，與當紅藝人廣告宣傳之平面攝影。</p>
+          <p>
+              橘攝婚紗攝影在創立時，就以區隔化市場策略進入寫真市場經 營，不同於其他同業大同小異之商品風格，獨家以廣告風格MV拍攝手法，迎領流行時尚趨勢的風格。<br><br>獨特的攝影手法與堅強的設計團隊，媒體爭相採訪報導錄製，並提供攝影棚拍攝現場節目，與當紅藝人廣告宣傳之平面攝影。
+          </p>
           <p class="social">
             <a href="https://www.facebook.com/MikanWedding"><span class="bi bi-facebook"></span></a>
             <a href="#"><span class="bi bi-instagram"></span></a>
@@ -224,6 +228,16 @@
         $(".v-1").addClass("active");
       }
 
+      </script>
+      <script type="text/javascript">
+        $(document).ready( function() {
+        if($(window).width() >= 1000 ) {
+              $('.modal').remove();
+        }
+          else {}
+        });
+
+        
       </script>
       
       <!-- Messenger 洽談外掛程式 Code -->

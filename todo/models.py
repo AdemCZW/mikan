@@ -196,6 +196,26 @@ class Wedding_04(models.Model):
     class Meta:
         verbose_name_plural = '韓系婚紗'
         verbose_name = '韓系婚紗'  
+
+class location_01(models.Model):
+    location_ph_001 = models.CharField(max_length=1000,default='圖片連結',verbose_name = '照片連結' ) 
+
+    def __str__(self):
+        return "拍攝地點" + str(self.id) + " 號 "  
+
+    class Meta:
+        verbose_name_plural = '拍攝景點'
+        verbose_name = '拍攝景點'  
+
+class castle_01(models.Model):
+    castle_ph_001 = models.CharField(max_length=1000,default='圖片連結',verbose_name = '照片連結' ) 
+
+    def __str__(self):
+        return "古堡婚紗" + str(self.id) + " 號 "  
+
+    class Meta:
+        verbose_name_plural = '古堡婚紗'
+        verbose_name = '古堡婚紗'  
           
 class Flight(models.Model):
 

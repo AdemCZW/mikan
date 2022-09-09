@@ -37,30 +37,46 @@
     
 
     <section class="section">
-
       <div class="container">
 
         <div class="row">
           {% for todo in object_list %}  
           
-          <div class="col-6">
-            <div class="step box-002">
-             <img src="{{ todo.studio_ph_001 }}">
+            <div class="col-6">
+              <div class="step box-002">
+                <span class="big_001 test_001" data-bs-toggle="modal" data-bs-target="#exampleModal{{ todo.id }}">
+             
+                  <img src="{{ todo.studio_ph_001 }}">
+                  </span>
+              </div>
             </div>
-          </div>
-          
+            <!-- Modal -->
+            <div class="modal fade" id="exampleModal{{ todo.id }}" tabindex="-1">
+              <div class="modal-dialog modal-md modal-dialog-centered">
+                <div class="modal-content">
+                  <div style="padding: 0px;" class="modal-body">
+                    <img style="width: 100%;" src="{{ todo.studio_ph_001 }}">
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">關閉</button>
+                    
+                  </div>
+                </div>
+              </div>
+            </div>
           
           {% endfor %}
+          
+
         </div>
       
     </div>
     </section>
-
-    
-    
-
-   
-
   </main><!-- End #main -->
-
+  <style type="text/css">
+    .modal-backdrop {
+      position: relative !important;
+    }
+  </style>
+  
   {% endblock  %}
