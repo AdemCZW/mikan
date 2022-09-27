@@ -29,41 +29,35 @@
     <link href="{% static 'assets/css/style.css' %}" rel="stylesheet">
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-4LBQS2GEQ2"></script>
-    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-
-        function gtag() {
-            dataLayer.push(arguments);
-        }
-        gtag('js', new Date());
-
-        gtag('config', 'G-4LBQS2GEQ2');
-    </script>
-    <script>
-        $(document).ready(function() {
-        
-            $('.off_v').click(function() {
-                $('.loading-all').toggle(false);
-                
-            });
-        });
-
-
-    </script>
-
 </head>
 
 <body>
-    <div class="loading-all fadeUp" style="padding:5%; text-align: center;">
-        <a href="#" style="font-size: 2em; margin-bottom: 3%; color: #000; " class="off_v">X</a>
-        
-        
-            <div class="line_btn-video video-container">
-                <iframe src="https://www.youtube.com/embed/cHu-9tMBqCU?autoplay=1&mute=1" frameborder="0"  allowfullscreen="true"></iframe>
-            </div>
+    
 
-    </div>
+      <!-- Modal -->
+      <div class="modal " id="myModal" role="dialog">
+        <div class="modal-dialog modal-xl">
+              <!-- Modal content-->
+          <div class="modal-content">
+            <div class="">
+              <div class="fadeUp">
+                    
+                    
+                    
+                        <div class="line_btn-video video-container">
+                            <iframe src="https://www.youtube.com/embed/cHu-9tMBqCU?autoplay=1&amp;mute=1" frameborder="0" allowfullscreen="true"></iframe>
+                        </div>
+
+                </div>
+            </div>
+            <div class="modal-footer" style="background-color:#000ff;">
+              <a type="button" id="close_001" class="btn btn-default" data-dismiss="modal" onclick="cancel()" onkeypress="cancel()">關閉，不再顯示</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
     <header id="header" class="fixed-top d-flex align-items-center">
         <div class="container d-flex justify-content-between align-items-center">
 
@@ -250,6 +244,7 @@
     <script src="{% static 'assets/js/min/plugins.min.js' %}"></script>
     <script src="{% static 'assets/js/min/main.min.js' %}"></script>
     <script src="{% static 'assets/js/vendor/modernizr-2.6.2.min.js' %}"></script>
+
     <script type="text/javascript">
         //<![CDATA[
         $(window).load(function() { // makes sure the whole site is loaded
@@ -266,11 +261,30 @@
         }
     </script>
     <script type="text/javascript">
-        $(document).ready(function() {
-            if ($(window).width() >= 1000) {
-                $('.modal').remove();
-            } else {}
-        });
+        
+    </script>
+    <script type="text/javascript">
+
+    $(document).ready(function(){
+        var valueNum = window.sessionStorage.userdata;
+        if (valueNum != "1") {
+          $("#myModal").toggle(true);
+          console.log("valueNum");
+        }
+    });
+      function cancel(){
+        window.sessionStorage.userdata = "1";
+              $("#close_001").click(function(){
+                $("#myModal").toggle(false)
+              })
+      }
+      function show(){
+        window.sessionStorage.userdata = "0";
+        $("#myModal").modal();
+      }
+
+
+        
     </script>
 
     <!-- Messenger 洽談外掛程式 Code -->
@@ -355,7 +369,7 @@
                 transform: translateY(0);
             }
             100% {
-                opacity: 0;
+                opacity: 1;
                 transform: translateY(0);
             }
         }
@@ -377,6 +391,13 @@
             height: 100%;
         }
         
+        #myModal{
+          position: fixed;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%,-50%);
+          z-index: 999999099;
+        }
     </style>
 
 </body>
