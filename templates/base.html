@@ -32,30 +32,30 @@
 </head>
 
 <body>
-    
 
-      <!-- Modal -->
-      <div class="modal " id="myModal" role="dialog">
+
+    <!-- Modal -->
+    <div class="modal " id="myModal" role="dialog">
         <div class="modal-dialog modal-xl">
-              <!-- Modal content-->
-          <div class="modal-content">
-            <div class="">
-              <div class="fadeUp">
-                    
-                    
-                    
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="">
+                    <div class="fadeUp">
+
+
+
                         <div class="line_btn-video video-container">
                             <iframe src="https://www.youtube.com/embed/cHu-9tMBqCU?autoplay=1&amp;mute=1" frameborder="0" allowfullscreen="true"></iframe>
                         </div>
 
+                    </div>
+                </div>
+                <div class="modal-footer" style="background-color:#000ff;">
+                    <a type="button" id="close_001" class="btn btn-default" data-dismiss="modal" onclick="cancel()" onkeypress="cancel()">關閉，不再顯示</a>
                 </div>
             </div>
-            <div class="modal-footer" style="background-color:#000ff;">
-              <a type="button" id="close_001" class="btn btn-default" data-dismiss="modal" onclick="cancel()" onkeypress="cancel()">關閉，不再顯示</a>
-            </div>
-          </div>
         </div>
-      </div>
+    </div>
 
 
     <header id="header" class="fixed-top d-flex align-items-center">
@@ -261,30 +261,27 @@
         }
     </script>
     <script type="text/javascript">
-        
     </script>
     <script type="text/javascript">
+        $(document).ready(function() {
+            var valueNum = window.sessionStorage.userdata;
+            if (valueNum != "1") {
+                $("#myModal").toggle(true);
+                console.log("valueNum");
+            }
+        });
 
-    $(document).ready(function(){
-        var valueNum = window.sessionStorage.userdata;
-        if (valueNum != "1") {
-          $("#myModal").toggle(true);
-          console.log("valueNum");
-        }
-    });
-      function cancel(){
-        window.sessionStorage.userdata = "1";
-              $("#close_001").click(function(){
+        function cancel() {
+            window.sessionStorage.userdata = "1";
+            $("#close_001").click(function() {
                 $("#myModal").toggle(false)
-              })
-      }
-      function show(){
-        window.sessionStorage.userdata = "0";
-        $("#myModal").modal();
-      }
+            })
+        }
 
-
-        
+        function show() {
+            window.sessionStorage.userdata = "0";
+            $("#myModal").modal();
+        }
     </script>
 
     <!-- Messenger 洽談外掛程式 Code -->
@@ -321,12 +318,10 @@
             min-height: 100vh;
             overflow: hidden;
             padding-top: 10%;
-            
             background-color: #ffffff9e;
             z-index: 99999000;
             position: fixed;
-
-            }
+        }
         
         #splash {
             position: fixed;
@@ -373,14 +368,14 @@
                 transform: translateY(0);
             }
         }
-
+        
         .video-container {
             position: relative;
             width: 100%;
             height: 0;
             padding-bottom: 56.25%;
         }
-
+        
         .video-container iframe,
         .video-container object,
         .video-container embed {
@@ -391,12 +386,12 @@
             height: 100%;
         }
         
-        #myModal{
-          position: fixed;
-          top: 50%;
-          left: 50%;
-          transform: translate(-50%,-50%);
-          z-index: 999999099;
+        #myModal {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 999999099;
         }
     </style>
 

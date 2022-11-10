@@ -1,291 +1,297 @@
-{% extends 'kid-base.html' %}
-{% block content %}
-{% load static %}
-      {% for kids in object_list %} 
-   <div class="main-banner" id="top">
+{% extends 'kid-base.html' %} {% block content %} {% load static %} {% for kids in object_list %}
+<div class="main-banner" id="top">
     <div class="container">
-      <div class="row">
-        <div class="col-lg-12">
-          <div class="row">
-            <div class="col-lg-6 align-self-center">
-              <div class="owl-carousel owl-banner">
-                  
-                <div class="item header-text">
-                  <h6>{{ kids.kid_home_001 }}</h6>
-                  <h2>{{ kids.kid_home_002 }}</h2>
-                  <p>{{ kids.kid_home_003 }}</p>
-                  <div class="down-buttons">
-                    <div class="main-blue-button-hover">
-                      <a href="{{ kids.kid_home_004 }}">瞭解更多</a>
-                    </div>
-                  </div>
-                </div>
-                <div class="item header-text">
-                  <h6>{{ kids.kid_home_005 }}</h6>
-                  <h2>{{ kids.kid_home_006 }}</h2>
-                  <p>{{ kids.kid_home_007 }}</p>
-                  <div class="down-buttons">
-                    <div class="main-blue-button-hover">
-                      <a href="{{ kids.kid_home_004 }}">瞭解更多</a>
-                    </div>
-                    
-                  </div>
-                </div>
-                <div class="item header-text">
-                  <h6>{{ kids.kid_home_009 }}</h6>
-                  <h2>{{ kids.kid_home_010 }}</h2>
-                  <p>{{ kids.kid_home_011 }}</p>
-                  <div class="down-buttons">
-                    <div class="main-blue-button-hover">
-                      <a href="{{ kids.kid_home_004 }}">瞭解更多</a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div id="services" class="our-services section">
-    <div class="services-right-dec">
-      <img src="{% static 'kids/assets/images/services-right-dec.png' %}" alt="">
-    </div>
-    <div class="container">
-      <div class="services-left-dec">
-        <img src="{% static 'kids/assets/images/services-left-dec.png' %}" alt="">
-      </div>
-      <div class="row">
-        <div class="col-lg-6 offset-lg-3">
-          <div class="section-heading">
-            <h2>我們<em>提供</em>最好的服務<span>與我們的團隊</span></h2>
-          </div>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-lg-12">
-          <div class="owl-carousel owl-services">
-            <div class="item">
-              <h4>{{ kids.kid_service_001 }}</h4>
-              <div class="icon"><img src="{% static 'kids/assets/images/service-icon-01.png' %}" alt=""></div>
-              <p>{{ kids.kid_service_002 }}</p>
-            </div>
-            <div class="item">
-              <h4>{{ kids.kid_service_003 }}</h4>
-              <div class="icon"><img src="{% static 'kids/assets/images/service-icon-02.png' %}" alt=""></div>
-              <p>{{ kids.kid_service_004 }}</p>
-            </div>
-            <div class="item">
-              <h4>{{ kids.kid_service_005 }}</h4>
-              <div class="icon"><img src="{% static 'kids/assets/images/service-icon-03.png' %}" alt=""></div>
-              <p>{{ kids.kid_service_006 }}</p>
-            </div>
-            <div class="item">
-              <h4>{{ kids.kid_service_007 }}</h4>
-              <div class="icon"><img src="{% static 'kids/assets/images/service-icon-04.png' %}" alt=""></div>
-              <p>{{ kids.kid_service_008 }}</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="row">
+                    <div class="col-lg-6 align-self-center">
+                        <div class="owl-carousel owl-banner">
 
-  
-  <div id="portfolio" class="our-portfolio section">
-    <div class="portfolio-left-dec">
-      <img src="{% static 'kids/assets/images/portfolio-left-dec.png' %}" alt="">
+                            <div class="item header-text">
+                                <h6>{{ kids.kid_home_001 }}</h6>
+                                <h2>{{ kids.kid_home_002 }}</h2>
+                                <p>{{ kids.kid_home_003 }}</p>
+                                <div class="down-buttons">
+                                    <div class="main-blue-button-hover">
+                                        <a href="{{ kids.kid_home_004 }}">瞭解更多</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="item header-text">
+                                <h6>{{ kids.kid_home_005 }}</h6>
+                                <h2>{{ kids.kid_home_006 }}</h2>
+                                <p>{{ kids.kid_home_007 }}</p>
+                                <div class="down-buttons">
+                                    <div class="main-blue-button-hover">
+                                        <a href="{{ kids.kid_home_004 }}">瞭解更多</a>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div class="item header-text">
+                                <h6>{{ kids.kid_home_009 }}</h6>
+                                <h2>{{ kids.kid_home_010 }}</h2>
+                                <p>{{ kids.kid_home_011 }}</p>
+                                <div class="down-buttons">
+                                    <div class="main-blue-button-hover">
+                                        <a href="{{ kids.kid_home_004 }}">瞭解更多</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="services" class="our-services section">
+    <div class="services-right-dec">
+        <img src="{% static 'kids/assets/images/services-right-dec.png' %}" alt="">
     </div>
     <div class="container">
-      <div class="row">
-        <div class="col-lg-6 offset-lg-3">
-          <div class="section-heading">
-            <h2>各類攝影 <em>種類</em> &amp; 風格 <span>參考</span></h2>
-          </div>
+        <div class="services-left-dec">
+            <img src="{% static 'kids/assets/images/services-left-dec.png' %}" alt="">
         </div>
-      </div>
+        <div class="row">
+            <div class="col-lg-6 offset-lg-3">
+                <div class="section-heading">
+                    <h2>我們<em>提供</em>最好的服務<span>與我們的團隊</span></h2>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="owl-carousel owl-services">
+                    <div class="item">
+                        <h4>{{ kids.kid_service_001 }}</h4>
+                        <div class="icon"><img src="{% static 'kids/assets/images/service-icon-01.png' %}" alt=""></div>
+                        <p>{{ kids.kid_service_002 }}</p>
+                    </div>
+                    <div class="item">
+                        <h4>{{ kids.kid_service_003 }}</h4>
+                        <div class="icon"><img src="{% static 'kids/assets/images/service-icon-02.png' %}" alt=""></div>
+                        <p>{{ kids.kid_service_004 }}</p>
+                    </div>
+                    <div class="item">
+                        <h4>{{ kids.kid_service_005 }}</h4>
+                        <div class="icon"><img src="{% static 'kids/assets/images/service-icon-03.png' %}" alt=""></div>
+                        <p>{{ kids.kid_service_006 }}</p>
+                    </div>
+                    <div class="item">
+                        <h4>{{ kids.kid_service_007 }}</h4>
+                        <div class="icon"><img src="{% static 'kids/assets/images/service-icon-04.png' %}" alt=""></div>
+                        <p>{{ kids.kid_service_008 }}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div id="portfolio" class="our-portfolio section">
+    <div class="portfolio-left-dec">
+        <img src="{% static 'kids/assets/images/portfolio-left-dec.png' %}" alt="">
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6 offset-lg-3">
+                <div class="section-heading">
+                    <h2>各類攝影 <em>種類</em> &amp; 風格 <span>參考</span></h2>
+                </div>
+            </div>
+        </div>
     </div>
     <div class="container-fluid">
-      <div class="row">
-        <div class="col-lg-12">
-          <div class="owl-carousel owl-portfolio">
-            <div class="item">
-              <div class="thumb">
-                <img src="{{ kids.kid_photos_001 }}" alt="">
-                <div class="hover-effect">
-                  <div class="inner-content">
-                    <a rel="sponsored" href="https://www.facebook.com/mikanbaby/photos?locale=zh_TW" target="_parent"><h4>兒童情境照</h4></a>
-                    <span></span>
-                  </div>
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="owl-carousel owl-portfolio">
+                    <div class="item">
+                        <div class="thumb">
+                            <img src="{{ kids.kid_photos_001 }}" alt="">
+                            <div class="hover-effect">
+                                <div class="inner-content">
+                                    <a rel="sponsored" href="https://www.facebook.com/mikanbaby/photos?locale=zh_TW" target="_parent">
+                                        <h4>兒童情境照</h4>
+                                    </a>
+                                    <span></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="thumb">
+                            <img src="{{ kids.kid_photos_002 }}" alt="">
+                            <div class="hover-effect">
+                                <div class="inner-content">
+                                    <a href="https://www.facebook.com/mikanbaby/photos?locale=zh_TW">
+                                        <h4>兒童抓周照</h4>
+                                    </a>
+                                    <span></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="thumb">
+                            <img src="{{ kids.kid_photos_003 }}" alt="">
+                            <div class="hover-effect">
+                                <div class="inner-content">
+                                    <a rel="sponsored" href="https://www.facebook.com/mikanbaby/photos?locale=zh_TW" target="_parent">
+                                        <h4>孕婦寫真</h4>
+                                    </a>
+                                    <span></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="thumb">
+                            <img src="{{ kids.kid_photos_004 }}" alt="">
+                            <div class="hover-effect">
+                                <div class="inner-content">
+                                    <a href="https://www.facebook.com/mikanbaby/photos?locale=zh_TW">
+                                        <h4>新生兒照</h4>
+                                    </a>
+                                    <span></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-              </div>
             </div>
-            <div class="item">
-              <div class="thumb">
-                <img src="{{ kids.kid_photos_002 }}" alt="">
-                <div class="hover-effect">
-                  <div class="inner-content">
-                    <a href="https://www.facebook.com/mikanbaby/photos?locale=zh_TW"><h4>兒童抓周照</h4></a>
-                    <span></span>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="item">
-              <div class="thumb">
-                <img src="{{ kids.kid_photos_003 }}" alt="">
-                <div class="hover-effect">
-                  <div class="inner-content">
-                    <a rel="sponsored" href="https://www.facebook.com/mikanbaby/photos?locale=zh_TW" target="_parent"><h4>服裝道具照</h4></a>
-                    <span></span>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="item">
-              <div class="thumb">
-                <img src="{{ kids.kid_photos_004 }}" alt="">
-                <div class="hover-effect">
-                  <div class="inner-content">
-                    <a href="https://www.facebook.com/mikanbaby/photos?locale=zh_TW"><h4>新生兒照</h4></a>
-                    <span></span>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
         </div>
-      </div>
     </div>
-  </div>
+</div>
 
-  <div id="pricing" class="pricing-tables">
+<div id="pricing" class="pricing-tables">
     <div class="tables-left-dec">
-      <img src="{% static 'kids/assets/images/tables-left-dec.png' %}" alt="">
+        <img src="{% static 'kids/assets/images/tables-left-dec.png' %}" alt="">
     </div>
     <div class="tables-right-dec">
-      <img src="{% static 'kids/assets/images/tables-right-dec.png' %}" alt="">
+        <img src="{% static 'kids/assets/images/tables-right-dec.png' %}" alt="">
     </div>
     <div class="container">
-      <div class="row">
-        <div class="col-lg-6 offset-lg-3">
-          <div class="section-heading">
-            <h2>各項<em>套裝</em>專屬於你的<span>方案</span></h2>
-            
-          </div>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-lg-4">
-          <div class="item first-item">
-            <h4>Plan A</h4>
-            <em>{{ kids.kid_plans_001 }}</em>
-            <span>{{ kids.kid_plans_002 }}</span>
-            <ul>
-              {{ kids.kid_plans_003|safe }}
-            </ul>
-            <div class="main-blue-button-hover">
-              <a href="https://line.me/R/ti/p/%40073bsqnq">了解詳細</a>
+        <div class="row">
+            <div class="col-lg-6 offset-lg-3">
+                <div class="section-heading">
+                    <h2>各項<em>套裝</em>專屬於你的<span>方案</span></h2>
+
+                </div>
             </div>
-          </div>
         </div>
-        <div class="col-lg-4">
-          <div class="item second-item">
-            <h4>Plan B</h4>
-            <em>{{ kids.kid_plans_004 }}</em>
-            <span>{{ kids.kid_plans_005 }}</span>
-            <ul>
-              {{ kids.kid_plans_006|safe }}
-            </ul>
-            <div class="main-blue-button-hover">
-              <a href="https://line.me/R/ti/p/%40073bsqnq">了解詳細</a>
+        <div class="row">
+            <div class="col-lg-4">
+                <div class="item first-item">
+                    <h4>Plan A</h4>
+                    <em>{{ kids.kid_plans_001 }}</em>
+                    <span>{{ kids.kid_plans_002 }}</span>
+                    <ul>
+                        {{ kids.kid_plans_003|safe }}
+                    </ul>
+                    <div class="main-blue-button-hover">
+                        <a href="https://line.me/R/ti/p/%40073bsqnq">了解詳細</a>
+                    </div>
+                </div>
             </div>
-          </div>
-        </div>
-        <div class="col-lg-4">
-          <div class="item third-item">
-            <h4>Plan C</h4>
-            <em>{{ kids.kid_plans_007 }}</em>
-            <span>{{ kids.kid_plans_008 }}</span>
-            <ul>
-              {{ kids.kid_plans_009|safe }}
-            </ul>
-            <div class="main-blue-button-hover">
-              <a href="https://line.me/R/ti/p/%40073bsqnq">了解詳細</a>
+            <div class="col-lg-4">
+                <div class="item second-item">
+                    <h4>Plan B</h4>
+                    <em>{{ kids.kid_plans_004 }}</em>
+                    <span>{{ kids.kid_plans_005 }}</span>
+                    <ul>
+                        {{ kids.kid_plans_006|safe }}
+                    </ul>
+                    <div class="main-blue-button-hover">
+                        <a href="https://line.me/R/ti/p/%40073bsqnq">了解詳細</a>
+                    </div>
+                </div>
             </div>
-          </div>
+            <div class="col-lg-4">
+                <div class="item third-item">
+                    <h4>Plan C</h4>
+                    <em>{{ kids.kid_plans_007 }}</em>
+                    <span>{{ kids.kid_plans_008 }}</span>
+                    <ul>
+                        {{ kids.kid_plans_009|safe }}
+                    </ul>
+                    <div class="main-blue-button-hover">
+                        <a href="https://line.me/R/ti/p/%40073bsqnq">了解詳細</a>
+                    </div>
+                </div>
+            </div>
         </div>
-      </div>
     </div>
-  </div>
-  <div id="contact" class="contact-us section">
+</div>
+<div id="contact" class="contact-us section">
     <div class="container">
-      <div class="row">
-        <div class="col-lg-7">
-          <div class="section-heading">
-            <h2>與我們 <em>聯絡</em></h2>
-            <div id="map">
-              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3614.6682918954307!2d121.55534171489526!3d25.045328731974145!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442abc0e707eae3%3A0x71324825ffa400d1!2z5qmY5pSd5ama57SX5pSd5b2x772c5Y-w5YyX6aaW6YG45ama57SX772c5ama5pSd772c5ama56au5pSd5b2x772c5paw56eY772c5aSn5bC656K85ama57SX772c56au5pyN5Ye656ef772c5a2V5amm5a-r55yf772c5oOF5L625a-r55yf772c5YWo5a6256aP772c6Zao6Jyc5a-r55yf772c5a-154mp5pSd5b2x772c5Zau6Lqr5ama57SX772c5ZCM5oCn5ama57SX772c5b2i6LGh54Wn5ouN5pSd!5e0!3m2!1szh-TW!2stw!4v1651236535255!5m2!1szh-TW!2stw" width="100%" height="360" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <div class="row">
+            <div class="col-lg-7">
+                <div class="section-heading">
+                    <h2>與我們 <em>聯絡</em></h2>
+                    <div id="map">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3614.6682918954307!2d121.55534171489526!3d25.045328731974145!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442abc0e707eae3%3A0x71324825ffa400d1!2z5qmY5pSd5ama57SX5pSd5b2x772c5Y-w5YyX6aaW6YG45ama57SX772c5ama5pSd772c5ama56au5pSd5b2x772c5paw56eY772c5aSn5bC656K85ama57SX772c56au5pyN5Ye656ef772c5a2V5amm5a-r55yf772c5oOF5L625a-r55yf772c5YWo5a6256aP772c6Zao6Jyc5a-r55yf772c5a-154mp5pSd5b2x772c5Zau6Lqr5ama57SX772c5ZCM5oCn5ama57SX772c5b2i6LGh54Wn5ouN5pSd!5e0!3m2!1szh-TW!2stw!4v1651236535255!5m2!1szh-TW!2stw"
+                            width="100%" height="360" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                    <div class="info">
+                        <span style="margin-right: 0px;"><i class="fa fa-phone"></i></span><a style="font-size:28px;color: #ff695f;" href="tel:{{ kids.kid_phone_001 }}">{{ kids.kid_phone_001 }}</a>
+                        <span style="margin-right: 0px;"><i class="fa fa-plus-square-o"></i></span> <a style="font-size:28px;color: #ff695f;" href="{{ kids.kid_line_001 }}">LINE</a>
+                    </div>
+                </div>
             </div>
-            <div class="info">
-              <span style="margin-right: 0px;"><i class="fa fa-phone"></i></span><a style="font-size:28px;color: #ff695f;" href="tel:{{ kids.kid_phone_001 }}">{{ kids.kid_phone_001 }}</a>
-              <span style="margin-right: 0px;"><i class="fa fa-plus-square-o"></i></span> <a style="font-size:28px;color: #ff695f;" href="{{ kids.kid_line_001 }}">LINE</a>
-            </div>
-          </div>
+
         </div>
-        
-      </div>
     </div>
     <div class="contact-dec">
-      <img src="{% static 'kids/assets/images/contact-dec.png' %}" alt="">
+        <img src="{% static 'kids/assets/images/contact-dec.png' %}" alt="">
     </div>
     <div class="contact-left-dec">
-      <img src="{% static 'kids/assets/images/contact-left-dec.png' %}" alt="">
+        <img src="{% static 'kids/assets/images/contact-left-dec.png' %}" alt="">
     </div>
     <div class="row">
-      
-    </div>
-  </div>
 
-  <div class="footer-dec" style="margin-top: 0px;"> 
+    </div>
+</div>
+
+<div class="footer-dec" style="margin-top: 0px;">
     <img src="{% static 'kids/assets/images/footer-dec.png' %}" alt="">
-  </div>
+</div>
 
-  <footer>
+<footer>
     <div class="container">
-      <div class="row">
-        <div class="col-lg-3">
-          <div class="about footer-item">
-            <div class="logo">
-              <a href="#"><img src="{% static 'kids/assets/images/logo.png' %}" alt="Onix Digital TemplateMo"></a>
+        <div class="row">
+            <div class="col-lg-3">
+                <div class="about footer-item">
+                    <div class="logo">
+                        <a href="#"><img src="{% static 'kids/assets/images/logo.png' %}" alt="Onix Digital TemplateMo"></a>
+                    </div>
+                    <ul>
+                        <li><a href="{{ kids.kid_fb_001 }}"><i class="fa fa-facebook"></i></a></li>
+                        <li><a href="{{ kids.kid_ig_001 }}"><i class="fa fa-instagram"></i></a></li>
+                    </ul>
+                </div>
             </div>
-            <ul>
-              <li><a href="{{ kids.kid_fb_001 }}"><i class="fa fa-facebook"></i></a></li>
-              <li><a href="{{ kids.kid_ig_001 }}"><i class="fa fa-instagram"></i></a></li>
-            </ul>
-          </div>
+            <div class="col-lg-3">
+                <div class="community footer-item">
+                    <h4>社群</h4>
+                    <ul>
+                        <li><a href="https://mikan.com.tw/">橘攝婚紗MIKAN</a></li>
+                        <li><a href="https://mikan.com.tw/shotdog">攝狗狗Shotdog</a></li>
+                        <li><a href="https://mikan.com.tw/verona">手工婚紗Verona Huang</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-lg-12">
+                <div class="copyright">
+                    <br> Designed by <a rel="nofollow" href="" title="free CSS templates">MIKAN</a></p>
+                </div>
+            </div>
         </div>
-        <div class="col-lg-3">
-          <div class="community footer-item">
-            <h4>社群</h4>
-            <ul>
-              <li><a href="https://mikan.com.tw/">橘攝婚紗MIKAN</a></li>
-              <li><a href="https://mikan.com.tw/shotdog">攝狗狗Shotdog</a></li>
-              <li><a href="https://mikan.com.tw/verona">手工婚紗Verona Huang</a></li>
-            </ul>
-          </div>
-        </div>
-        <div class="col-lg-12">
-          <div class="copyright">
-            <br>
-            Designed by <a rel="nofollow" href="" title="free CSS templates">MIKAN</a></p>
-          </div>
-        </div>
-      </div>
     </div>
-  </footer>
-      {% endfor %}
+</footer>
+{% endfor %}
 
-  </main><!-- End #main -->
-{% endblock  %}
+</main>
+<!-- End #main -->
+{% endblock %}

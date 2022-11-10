@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 {% load static %}
-  <head>
+
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="獨家的拍攝手法，多種時尚拍攝風格，以及堅強設計團隊，造就了現今的橘攝，另外有自家攝影棚提供拍攝還有與當紅藝人廣告宣傳之合作">
@@ -18,81 +19,178 @@
     <link rel="stylesheet" href="{% static 'kids/assets/css/templatemo-onix-digital.css' %}">
     <link rel="stylesheet" href="{% static 'kids/assets/css/animated.css' %}">
     <link rel="stylesheet" href="{% static 'kids/assets/css/owl.css' %}">
-  </head>
+</head>
+
 <body>
-  <!-- ***** Preloader Start ***** -->
-  <div id="js-preloader" class="js-preloader">
-    <div class="preloader-inner">
-      <span class="dot"></span>
-      <div class="dots">
-        <span></span>
-        <span></span>
-        <span></span>
-      </div>
-    </div>
-  </div>
-  <!-- ***** Preloader End ***** -->
-  <!-- ***** Header Area Start ***** -->
-  <header class="header-area header-sticky wow slideInDown" data-wow-duration="0.75s" data-wow-delay="0s">
-    <div class="container">
-      <div class="row">
-        <div class="col-12">
-          <nav class="main-nav">
-            <!-- ***** Logo Start ***** -->
-            <a href="index.html" class="logo">
-              <img src="{% static 'kids/assets/images/logo.png' %}">
-            </a>
-            <!-- ***** Logo End ***** -->
-            <!-- ***** Menu Start ***** -->
-            <ul class="nav">
-              <li class="scroll-to-section"><a href="#top" class="active">首頁</a></li>
-              <li class="scroll-to-section"><a href="#services">服務內容</a></li>
-              <li class="scroll-to-section"><a href="#pricing">價格方案</a></li>
-              <li class="scroll-to-section"><a href="#portfolio">作品集</a></li>
-              <li class="scroll-to-section"><a href="#contact">聯絡我們</a></li> 
-              <li class="scroll-to-section"><div class="main-red-button-hover"><a href="#contact">即刻預約</a></div></li> 
-            </ul>        
-            <a class='menu-trigger'>
-                <span>Menu</span>
-            </a>
-            <!-- ***** Menu End ***** -->
-          </nav>
+    <div class="modal " id="myModal" role="dialog">
+        <div class="modal-dialog modal-xl">
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="">
+                    <div class="fadeUp">
+                        <div class="line_btn-video video-container">
+                            <iframe src="https://www.youtube.com/embed/cHu-9tMBqCU?autoplay=1&amp;mute=1" frameborder="0" allowfullscreen="true"></iframe>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="modal-footer" style="background-color:#000ff;">
+                    <a type="button" id="close_001" class="btn btn-default" data-dismiss="modal" onclick="cancel()" onkeypress="cancel()">關閉，不再顯示</a>
+                </div>
+            </div>
         </div>
-      </div>
     </div>
-  </header>
-  <!-- ***** Header Area End ***** -->
-
-      {% block content %}
-      {% endblock  %}
 
 
-  <!-- Scripts -->
-  <script src="{% static 'kids/vendor/jquery/jquery.min.js' %}"></script>
-  <script src="{% static 'kids/vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
-  <script src="{% static 'kids/assets/js/owl-carousel.js' %}"></script>
-  <script src="{% static 'kids/assets/js/animation.js' %}"></script>
-  <script src="{% static 'kids/assets/js/imagesloaded.js' %}"></script>
-  <script src="{% static 'kids/assets/js/custom.js' %}"></script>
 
-  <script>
-  // Acc
-    $(document).on("click", ".naccs .menu div", function() {
-      var numberIndex = $(this).index();
+    <!-- ***** Preloader Start ***** -->
+    <div id="js-preloader" class="js-preloader">
+        <div class="preloader-inner">
+            <span class="dot"></span>
+            <div class="dots">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </div>
+    <!-- ***** Preloader End ***** -->
+    <!-- ***** Header Area Start ***** -->
+    <header class="header-area header-sticky wow slideInDown" data-wow-duration="0.75s" data-wow-delay="0s">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <nav class="main-nav">
+                        <!-- ***** Logo Start ***** -->
+                        <a href="index.html" class="logo">
+                            <img style="width: 90px;" src="{% static 'kids/assets/images/logo.png' %}">
+                        </a>
+                        <!-- ***** Logo End ***** -->
+                        <!-- ***** Menu Start ***** -->
+                        <ul class="nav">
+                            <li class="scroll-to-section"><a href="#top" class="active">首頁</a></li>
+                            <li class="scroll-to-section"><a href="#services">服務內容</a></li>
+                            <li class="scroll-to-section"><a href="#pricing">價格方案</a></li>
+                            <li class="scroll-to-section"><a href="#portfolio">作品集</a></li>
+                            <li class="scroll-to-section"><a href="#contact">聯絡我們</a></li>
+                            <li class="scroll-to-section">
+                                <div class="main-red-button-hover"><a href="#contact">即刻預約</a></div>
+                            </li>
+                        </ul>
+                        <a class='menu-trigger'>
+                            <span>Menu</span>
+                        </a>
+                        <!-- ***** Menu End ***** -->
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- ***** Header Area End ***** -->
 
-      if (!$(this).is("active")) {
-          $(".naccs .menu div").removeClass("active");
-          $(".naccs ul li").removeClass("active");
+    {% block content %} {% endblock %}
 
-          $(this).addClass("active");
-          $(".naccs ul").find("li:eq(" + numberIndex + ")").addClass("active");
 
-          var listItemHeight = $(".naccs ul")
-            .find("li:eq(" + numberIndex + ")")
-            .innerHeight();
-          $(".naccs ul").height(listItemHeight + "px");
+    <!-- Scripts -->
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <script src="{% static 'kids/vendor/jquery/jquery.min.js' %}"></script>
+    <script src="{% static 'kids/vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+    <script src="{% static 'kids/assets/js/owl-carousel.js' %}"></script>
+    <script src="{% static 'kids/assets/js/animation.js' %}"></script>
+    <script src="{% static 'kids/assets/js/imagesloaded.js' %}"></script>
+    <script src="{% static 'kids/assets/js/custom.js' %}"></script>
+
+    <style>
+        .fadeUp {
+            animation-name: fadeUpAnime;
+            animation-duration: 28s;
+            animation-fill-mode: forwards;
+            opacity: 0;
         }
-    });
-  </script>
+        
+        @keyframes fadeUpAnime {
+            0% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+            50% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .video-container {
+            position: relative;
+            width: 100%;
+            height: 0;
+            padding-bottom: 56.25%;
+        }
+        
+        .video-container iframe,
+        .video-container object,
+        .video-container embed {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+        
+        #myModal {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 999999099;
+        }
+    </style>
+
+    <script>
+        // Acc
+        $(document).on("click", ".naccs .menu div", function() {
+            var numberIndex = $(this).index();
+
+            if (!$(this).is("active")) {
+                $(".naccs .menu div").removeClass("active");
+                $(".naccs ul li").removeClass("active");
+
+                $(this).addClass("active");
+                $(".naccs ul").find("li:eq(" + numberIndex + ")").addClass("active");
+
+                var listItemHeight = $(".naccs ul")
+                    .find("li:eq(" + numberIndex + ")")
+                    .innerHeight();
+                $(".naccs ul").height(listItemHeight + "px");
+            }
+        });
+    </script>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            var valueNum = window.sessionStorage.userdata;
+            if (valueNum != "1") {
+                $("#myModal").toggle(true);
+                console.log("valueNum");
+            }
+        });
+
+        function cancel() {
+            window.sessionStorage.userdata = "1";
+            $("#close_001").click(function() {
+                $("#myModal").toggle(false)
+            })
+        }
+
+        function show() {
+            window.sessionStorage.userdata = "0";
+            $("#myModal").modal();
+        }
+    </script>
+
+
 </body>
+
 </html>

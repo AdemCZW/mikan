@@ -44,6 +44,16 @@ class Studio_001(models.Model):
         verbose_name_plural = '攝影棚圖片'
         verbose_name = '攝影棚圖片'
 
+class Studio_002(models.Model):
+    
+
+    def __str__(self):
+        return "照片連結" + str(self.id) + " 號 " 
+
+    class Meta:
+        verbose_name_plural = '攝影棚圖片'
+        verbose_name = '攝影棚圖片'
+
 class Service_001(models.Model):
     service_ph_001 = models.CharField(max_length=1000,default='圖片連結')  
 

@@ -13,7 +13,7 @@ from .views import (
     Price001ListView,Price002ListView,Price003ListView,Price004ListView,
     PnListView,SgListView,PfListView,CpListView,PtListView,AtListView,
     AtDetailView,Wedding01ListView,Wedding02ListView,Wedding03ListView,
-    Wedding04ListView,LocationView,CastleView
+    Wedding04ListView,LocationView,CastleView,StudioYtListView,
 
 
 )
@@ -22,6 +22,7 @@ app_name = 'todo'
 urlpatterns = [
     path('', WeddingListView.as_view(), name='list'),
     path('studio', StudioListView.as_view(), name='studio'),
+    path('studio-yt', StudioYtListView.as_view(), name='studio-yt'),
     path('service', ServiceListView.as_view(), name='service'),
     path('price001', Price001ListView.as_view(), name='price001'),
     path('price002', Price002ListView.as_view(), name='price002'),
