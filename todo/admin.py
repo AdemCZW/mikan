@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Customer,Flight,Index_001, Price_002,Studio_001,Service_001,Price_001, Price_002, Price_003, Price_004, Pn_001, Pf_001, Cp_001, Sg_001, Pt_001, at_001, Wedding_01, Wedding_02, Wedding_03, Wedding_04, location_01, castle_01
+from .models import Customer,Flight,Index_001, Price_002,Studio_001,Service_001,Price_001, Price_002, Price_003, Price_004, Pn_001, Pf_001, Cp_001, Sg_001, Pt_001, at_001, Wedding_01, Wedding_02, Wedding_03, Wedding_04, location_01, castle_01,Studio_002
 
 
 
@@ -13,6 +13,11 @@ class StudioAdmin(admin.ModelAdmin):
 	list_display = ('studio_ph_001',)
 
 admin.site.register(Studio_001)	
+
+class StudioYtAdmin(admin.ModelAdmin):
+	list_display = ('studio_yt','studio_yt_tit')
+
+admin.site.register(Studio_002)	
 
 class ServiceAdmin(admin.ModelAdmin):
 	list_display = ('service_ph_001',)
