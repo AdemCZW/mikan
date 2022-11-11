@@ -45,15 +45,15 @@ class Studio_001(models.Model):
         verbose_name = '攝影棚圖片'
 
 class Studio_002(models.Model):
-    studio_yt = models.CharField(max_length=1000,default='',verbose_name = '影片連結')
+    studio_yt = models.CharField(max_length=1000,default='',verbose_name = '嵌入youtube連結')
     studio_yt_tit = models.CharField(max_length=1000,default='',verbose_name = '選項名稱') 
 
     def __str__(self):
         return "youtube門市" + str(self.id) + " 號 " 
 
     class Meta:
-        verbose_name_plural = 'youtube門市'
-        verbose_name = 'youtube門市'
+        verbose_name_plural = '門市/攝影棚'
+        verbose_name = '門市攝影棚'
 
 class Service_001(models.Model):
     service_ph_001 = models.CharField(max_length=1000,default='圖片連結')  
