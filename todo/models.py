@@ -76,6 +76,7 @@ class Price_001(models.Model):
     class Meta:
         verbose_name_plural = '婚紗單拍'
         verbose_name = '婚紗單拍'
+        ordering = ['-id']
 
 
 class Price_002(models.Model):
@@ -90,6 +91,7 @@ class Price_002(models.Model):
     class Meta:
         verbose_name_plural = '孕婦寫真'
         verbose_name = '孕婦寫真'
+        ordering = ['-id']
 
 
 class Price_003(models.Model):
@@ -130,6 +132,7 @@ class Pn_001(models.Model):
     class Meta:
         verbose_name_plural = '攝影作品-孕婦寫真'
         verbose_name = '攝影作品-孕婦寫真'
+        ordering = ['-id']
 
 
 class Pf_001(models.Model):
@@ -142,6 +145,7 @@ class Pf_001(models.Model):
     class Meta:
         verbose_name_plural = '攝影作品-專業形象照片'
         verbose_name = '攝影作品-專業形象照片'
+        ordering = ['-id']
 
 
 class Cp_001(models.Model):
@@ -154,6 +158,7 @@ class Cp_001(models.Model):
     class Meta:
         verbose_name_plural = '攝影作品-情侶寫真'
         verbose_name = '攝影作品-情侶寫真'
+        ordering = ['-id']
 
 
 class Sg_001(models.Model):
@@ -166,6 +171,7 @@ class Sg_001(models.Model):
     class Meta:
         verbose_name_plural = '攝影作品-單身婚紗'
         verbose_name = '攝影作品-單身婚紗'
+        ordering = ['-id']
 
 
 class Pt_001(models.Model):
@@ -195,6 +201,7 @@ class at_001(models.Model):
     class Meta:
         verbose_name_plural = '活動專區'
         verbose_name = '活動專區'
+        ordering = ['-id']
 
 
 class Wedding_01(models.Model):
@@ -207,6 +214,7 @@ class Wedding_01(models.Model):
     class Meta:
         verbose_name_plural = '古裝婚紗'
         verbose_name = '古裝婚紗'
+        ordering = ['-id']
 
 
 class Wedding_02(models.Model):
@@ -219,6 +227,7 @@ class Wedding_02(models.Model):
     class Meta:
         verbose_name_plural = '景點婚紗'
         verbose_name = '景點婚紗'
+        ordering = ['-id']
 
 
 class Wedding_03(models.Model):
@@ -231,6 +240,7 @@ class Wedding_03(models.Model):
     class Meta:
         verbose_name_plural = '摩登婚紗'
         verbose_name = '摩登婚紗'
+        ordering = ['-id']
 
 
 class Wedding_04(models.Model):
@@ -243,6 +253,7 @@ class Wedding_04(models.Model):
     class Meta:
         verbose_name_plural = '韓系婚紗'
         verbose_name = '韓系婚紗'
+        ordering = ['-id']
 
 
 class location_01(models.Model):
@@ -267,6 +278,7 @@ class castle_01(models.Model):
     class Meta:
         verbose_name_plural = '古堡婚紗'
         verbose_name = '古堡婚紗'
+        ordering = ['-id']
 
 
 class youtube_studio(models.Model):
