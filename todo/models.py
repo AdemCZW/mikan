@@ -178,7 +178,7 @@ class Pt_001(models.Model):
     class Meta:
         verbose_name_plural = '攝影作品-寵物婚紗'
         verbose_name = '攝影作品-寵物婚紗'
-        ordering = ['id']
+        ordering = ['-id']
 
 
 class at_001(models.Model):
