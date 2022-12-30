@@ -13,7 +13,6 @@ html {
 }
 
 body {
-  
   color: #9fa1a4;
   line-height: 1.5;
 }
@@ -21,14 +20,20 @@ body {
 a {
   color: #777;
   text-decoration: none;
-  transition: .3s all ease;
+  transition: 0.3s all ease;
 }
 
 a:hover {
   color: #000;
 }
 
-h1, h2, h3, h4, h5, h6, .font-heading {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.font-heading {
   font-family: "Poppins", sans-serif;
   color: #000;
 }
@@ -55,9 +60,9 @@ h1, h2, h3, h4, h5, h6, .font-heading {
 }
 
 figure figcaption {
-  margin-top: .5rem;
+  margin-top: 0.5rem;
   font-style: italic;
-  font-size: .8rem;
+  font-size: 0.8rem;
 }
 
 section {
@@ -65,7 +70,7 @@ section {
 }
 
 .section {
-  padding: 7rem 0;
+  padding: 4rem 0;
 }
 
 .section-heading {
@@ -170,7 +175,6 @@ section {
 .step {
   box-shadow: 0 10px 30px -5px rgba(0, 0, 0, 0.1);
   background: #fff;
-  
 }
 
 .step .number {
@@ -178,7 +182,7 @@ section {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   font-weight: 700;
-  letter-spacing: .2rem;
+  letter-spacing: 0.2rem;
   margin-bottom: 10px;
   display: block;
 }
@@ -199,7 +203,7 @@ section {
 }
 
 .review .stars span {
-  color: #FF8803;
+  color: #ff8803;
 }
 
 .review .stars .muted {
@@ -265,7 +269,7 @@ section {
 .pricing .popularity {
   text-transform: uppercase;
   font-size: 12px;
-  letter-spacing: .2rem;
+  letter-spacing: 0.2rem;
   display: block;
   margin-bottom: 20px;
 }
@@ -347,7 +351,8 @@ section {
   border: 1px solid #dae0e5;
 }
 
-.form-control:active, .form-control:focus {
+.form-control:active,
+.form-control:focus {
   outline: none;
   box-shadow: none;
   border: 1px solid #2d71a1;
@@ -475,7 +480,8 @@ section {
   margin-bottom: 15px;
 }
 
-.categories li, .sidelink li {
+.categories li,
+.sidelink li {
   position: relative;
   margin-bottom: 10px;
   padding-bottom: 10px;
@@ -483,25 +489,29 @@ section {
   list-style: none;
 }
 
-.categories li:last-child, .sidelink li:last-child {
+.categories li:last-child,
+.sidelink li:last-child {
   margin-bottom: 0;
   border-bottom: none;
   padding-bottom: 0;
 }
 
-.categories li a, .sidelink li a {
+.categories li a,
+.sidelink li a {
   text-decoration: none;
   display: block;
 }
 
-.categories li a span, .sidelink li a span {
+.categories li a span,
+.sidelink li a span {
   position: absolute;
   right: 0;
   top: 0;
   color: #ccc;
 }
 
-.categories li.active a, .sidelink li.active a {
+.categories li.active a,
+.sidelink li.active a {
   text-decoration: none;
   color: #000000;
   font-style: italic;
@@ -555,7 +565,7 @@ section {
   text-decoration: none;
   text-transform: uppercase;
   font-size: 13px;
-  letter-spacing: .1em;
+  letter-spacing: 0.1em;
   color: #ccc;
 }
 
@@ -615,7 +625,8 @@ section {
   font-weight: 500;
 }
 
-#header .logo h1 a, #header .logo h1 a:hover {
+#header .logo h1 a,
+#header .logo h1 a:hover {
   color: #fff;
   text-decoration: none;
 }
@@ -666,7 +677,9 @@ section {
   margin-left: 5px;
 }
 
-.navbar a:hover, .navbar .active, .navbar li:hover > a {
+.navbar a:hover,
+.navbar .active,
+.navbar li:hover > a {
   color: #fff;
 }
 
@@ -700,7 +713,9 @@ section {
   font-size: 12px;
 }
 
-.navbar .dropdown ul a:hover, .navbar .dropdown ul .active:hover, .navbar .dropdown ul li:hover > a {
+.navbar .dropdown ul a:hover,
+.navbar .dropdown ul .active:hover,
+.navbar .dropdown ul li:hover > a {
   color: #2d71a1;
 }
 
@@ -791,7 +806,9 @@ section {
   color: #101c36;
 }
 
-.navbar-mobile a:hover, .navbar-mobile .active, .navbar-mobile li:hover > a {
+.navbar-mobile a:hover,
+.navbar-mobile .active,
+.navbar-mobile li:hover > a {
   color: #2d71a1;
 }
 
@@ -819,7 +836,9 @@ section {
   font-size: 12px;
 }
 
-.navbar-mobile .dropdown ul a:hover, .navbar-mobile .dropdown ul .active:hover, .navbar-mobile .dropdown ul li:hover > a {
+.navbar-mobile .dropdown ul a:hover,
+.navbar-mobile .dropdown ul .active:hover,
+.navbar-mobile .dropdown ul li:hover > a {
   color: #2d71a1;
 }
 
@@ -835,8 +854,6 @@ section {
   position: relative;
   background-position: center;
 }
-
-
 
 .hero-section .wave {
   width: 100%;
@@ -856,7 +873,8 @@ section {
   width: 100%;
 }
 
-.hero-section, .hero-section > .container > .row {
+.hero-section,
+.hero-section > .container > .row {
   height: 100vh;
   min-height: 880px;
 }
@@ -913,7 +931,8 @@ section {
   }
 }
 
-.hero-section .iphone-wrap .phone-2, .hero-section .iphone-wrap .phone-1 {
+.hero-section .iphone-wrap .phone-2,
+.hero-section .iphone-wrap .phone-1 {
   position: absolute;
   top: -50%;
   overflow: hidden;
@@ -923,14 +942,16 @@ section {
 }
 
 @media screen and (max-width: 992px) {
-  .hero-section .iphone-wrap .phone-2, .hero-section .iphone-wrap .phone-1 {
+  .hero-section .iphone-wrap .phone-2,
+  .hero-section .iphone-wrap .phone-1 {
     position: relative;
     top: 0;
     max-width: 100%;
   }
 }
 
-.hero-section .iphone-wrap .phone-2, .hero-section .iphone-wrap .phone-1 {
+.hero-section .iphone-wrap .phone-2,
+.hero-section .iphone-wrap .phone-1 {
   width: 250px;
 }
 
@@ -953,22 +974,19 @@ section {
     margin-top: 0px;
     margin-left: 100px;
   }
-
-  
 }
 
 @media screen and (max-width: 768px) {
   .box-002 {
-  margin-top: 0.5rem;
-}
-
+    margin-top: 0.5rem;
+  }
 }
 
 /*--------------------------------------------------------------
 # Footer
 --------------------------------------------------------------*/
 .footer {
-  padding: 5rem 0 2.5rem 0;
+  padding: 0rem 0 2.5rem 0;
 }
 
 .footer h3 {
@@ -988,7 +1006,8 @@ section {
   margin-bottom: 0px;
 }
 
-.footer .copyright, .footer .credits {
+.footer .copyright,
+.footer .credits {
   font-size: 14px;
 }
 
@@ -1000,7 +1019,7 @@ section {
   background: #f8f9fa;
   position: relative;
   text-align: center;
-  transition: .3s background ease;
+  transition: 0.3s background ease;
   color: #0d1e2d;
   line-height: 0;
 }
@@ -1022,7 +1041,6 @@ section {
   line-height: 0;
 }
 
-
 /*--------------------------------------------------------------
 # my css
 --------------------------------------------------------------*/
@@ -1034,7 +1052,6 @@ section {
 .box-002 {
   margin-bottom: 2rem;
   margin-top: 2rem;
-  
 }
 
 .box-002 img {
@@ -1051,7 +1068,6 @@ section {
 
 /*-----4 box*/
 .box-006 {
-  
 }
 
 .box-006 img {
@@ -1064,7 +1080,6 @@ section {
 
 .box-008 {
   margin: 0px auto;
-
 }
 
 .booking-001 {
@@ -1081,18 +1096,18 @@ section {
 }
 
 .item {
-    width: 200px;
-    float: left;
+  width: 200px;
+  float: left;
 }
 .item img {
-    display: block;
-    width: 100%;
+  display: block;
+  width: 100%;
 }
 button {
-    font-size: 18px;
+  font-size: 18px;
 }
-.container{
-    width:100%;
+.container {
+  width: 100%;
 }
 
 .price-txt {
@@ -1103,5 +1118,3 @@ button {
 .price-txt-til {
   color: rgb(233 30 99 / 70%);
 }
-
-
