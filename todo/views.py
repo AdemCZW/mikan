@@ -164,7 +164,7 @@ class YoutubeListView(ListView):
 
 class FamilyListView(ListView):
     model = family_01
-    template_name = 'flight/family.html'  # 樣板路徑
+    template_name = 'flight/fam.html'  # 樣板路徑
 
 
 class WeddingCreateView(CreateView):
