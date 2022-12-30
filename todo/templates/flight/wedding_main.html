@@ -1,11 +1,10 @@
-{% extends 'base.html' %}
-{% block content %}
+{% extends 'base.html' %} {% block content %}
 
-   <section class="hero-section" id="hero">
+<section class="hero-section" id="hero">
 
     <div class="wave">
 
-      <svg width="100%" height="355px" viewBox="0 0 1920 355" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+        <svg width="100%" height="355px" viewBox="0 0 1920 355" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
         <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
           <g id="Apple-TV" transform="translate(0.000000, -402.000000)" fill="#FFFFFF">
             <path d="M0,439.134243 C175.04074,464.89273 327.944386,477.771974 458.710937,477.771974 C654.860765,477.771974 870.645295,442.632362 1205.9828,410.192501 C1429.54114,388.565926 1667.54687,411.092417 1920,477.771974 L1920,757 L1017.15166,757 L0,757 L0,439.134243 Z" id="Path"></path>
@@ -16,169 +15,169 @@
     </div>
 
     <div class="container">
-      <div class="row align-items-center">
-        <div class="col-12 hero-text-image">
-          <div class="row">
-            <div class="col-lg-8 text-center text-lg-start">
-              <h1 data-aos="fade-right">ＭＩＫＡＮ</h1>
-              <p class="mb-5" data-aos="fade-right" data-aos-delay="100">專業婚禮攝影</p>
-              
+        <div class="row align-items-center">
+            <div class="col-12 hero-text-image">
+                <div class="row">
+                    <div class="col-lg-8 text-center text-lg-start">
+                        <h1 data-aos="fade-right">ＭＩＫＡＮ</h1>
+                        <p class="mb-5" data-aos="fade-right" data-aos-delay="100">專業婚禮攝影</p>
+
+                    </div>
+                    <div class="col-lg-4 iphone-wrap">
+
+                    </div>
+                </div>
             </div>
-            <div class="col-lg-4 iphone-wrap">
-              
-            </div>
-          </div>
         </div>
-      </div>
     </div>
 
-  </section><!-- End Hero -->
+</section>
+<!-- End Hero -->
 
-  <main id="main">
+<main id="main">
 
     <!-- ======= Home Section ======= -->
-     
+
 
     <section class="section">
 
-      <div class="container">
-        {% load static %}
-         {% csrf_token %}
-            {% for todo in object_list %}   
-        <div class="row">
-          <div class="col-lg-6 col-md-12">
-            <div class="step box-001">
-              <img src="{{ todo.mid_ph_010 }}">
+        <div class="container">
+            {% load static %} {% csrf_token %} {% for todo in object_list %}
+            <div class="row">
+                <div class="col-lg-6 col-md-12">
+                    <div class="step box-001">
+                        <img src="{{ todo.mid_ph_010 }}">
 
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="col-12">
+                        <div class="step box-002">
+                            <img src="{{ todo.mid_ph_011 }}">
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <div class="step box-002">
+                            <img src="{{ todo.mid_ph_012 }}">
+                        </div>
+                    </div>
+                </div>
             </div>
-          </div>
-          <div class="col-lg-6">
-          <div class="col-12">
-            <div class="step box-002">
-              <img src="{{ todo.mid_ph_011 }}">
-            </div>
-          </div>
-          <div class="col-12">
-            <div class="step box-002">
-              <img src="{{ todo.mid_ph_012 }}">   
-            </div>
-          </div>
-          </div>
         </div>
-      </div>
 
-      
+
 
     </section>
 
     <div class="site-section">
         <div class="container">
-          <div class="row justify-content-center text-center mb-4">
-          
-    
-          </div>
-          <div class="row">
-            <div class="col-6 col-sm-6 col-md-6 col-lg-4 box-006">
-              <span class="la la-paw la-3x mb-4 "></span>
-               <img class="img-00001" src='{{ todo.mid_ph_001 }}'>
-               <hr>
-               
-              <h4 class="h4 mb-2">{{ todo.mid_001 }}</h4>
-              
-              <ul class="list-unstyled list-line">
-                <li>{{ todo.mid_txt_001 }}</li>
-                
-              </ul>
+            <div class="row justify-content-center text-center mb-4">
+
+
             </div>
-            <div class="col-6 col-sm-6 col-md-6 col-lg-4 box-006">
-              <span class="la la-paw la-3x mb-4"></span>
-              <img src='{{ todo.mid_ph_002 }}'>
-              <hr>
-              <h4 class="h4 mb-2">{{ todo.mid_002 }}</h4>
-              <ul class="list-unstyled list-line">
-                <li>
-                  {{ todo.mid_txt_002 }}
-                </li>
-                
-              </ul>
+            <div class="row">
+                <div class="col-6 col-sm-6 col-md-6 col-lg-4 box-006">
+                    <span class="la la-paw la-3x mb-4 "></span>
+                    <img class="img-00001" src='{{ todo.mid_ph_001 }}'>
+                    <hr>
+
+                    <h4 class="h4 mb-2">{{ todo.mid_001 }}</h4>
+
+                    <ul class="list-unstyled list-line">
+                        <li>{{ todo.mid_txt_001 }}</li>
+
+                    </ul>
+                </div>
+                <div class="col-6 col-sm-6 col-md-6 col-lg-4 box-006">
+                    <span class="la la-paw la-3x mb-4"></span>
+                    <img src='{{ todo.mid_ph_002 }}'>
+                    <hr>
+                    <h4 class="h4 mb-2">{{ todo.mid_002 }}</h4>
+                    <ul class="list-unstyled list-line">
+                        <li>
+                            {{ todo.mid_txt_002 }}
+                        </li>
+
+                    </ul>
+                </div>
+                <div class="col-6 col-sm-6 col-md-6 col-lg-4 box-006">
+                    <span class="la la-paw la-3x mb-4"></span>
+                    <img src='{{ todo.mid_ph_003 }}'>
+                    <hr>
+                    <h4 class="h4 mb-2">{{ todo.mid_003 }}</h4>
+
+                    <ul class="list-unstyled list-line">
+                        <li>
+                            {{ todo.mid_txt_003 }}
+                        </li>
+
+                    </ul>
+                </div>
+
             </div>
-            <div class="col-6 col-sm-6 col-md-6 col-lg-4 box-006">
-              <span class="la la-paw la-3x mb-4"></span>
-              <img src='{{ todo.mid_ph_003 }}'>
-              <hr>
-              <h4 class="h4 mb-2">{{ todo.mid_003 }}</h4>
-              
-              <ul class="list-unstyled list-line">
-                <li>
-                  {{ todo.mid_txt_003 }}
-                </li>
-                
-              </ul>
-            </div>
-            
         </div>
-      </div>
     </div>
 
-      <br>
+    <br>
 
-      <div class="site-section">
+    <div class="site-section">
         <div class="container">
-          <div class="row justify-content-center text-center mb-4">
-            <div class="col-5 box-007">
-              <h3 class="h3 heading">服務項目</h3>
-              
-              <p>如有特殊需求，另請詢問</p>
+            <div class="row justify-content-center text-center mb-4">
+                <div class="col-5 box-007">
+                    <h3 class="h3 heading">服務項目</h3>
+
+                    <p>如有特殊需求，另請詢問</p>
+                </div>
             </div>
-          </div>
-          <div class="row box-008 text-center">
-            <div class="col-12 col-sm-6 col-md-6 col-lg-4">
-              <span class="la la-paw la-3x mb-4"></span>
-              <h4 class="h4 mb-2">{{ todo.mid_004 }}</h4>
-              <hr>
-              <ul class="list-unstyled list-line">
-                <li>
-                  {{ todo.mid_txt_004 }}
-                </li>
-                
-              </ul>
+            <div class="row box-008 text-center">
+                <div class="col-12 col-sm-6 col-md-6 col-lg-4">
+                    <span class="la la-paw la-3x mb-4"></span>
+                    <h4 class="h4 mb-2">{{ todo.mid_004 }}</h4>
+                    <hr>
+                    <ul class="list-unstyled list-line">
+                        <li>
+                            {{ todo.mid_txt_004 }}
+                        </li>
+
+                    </ul>
+                </div>
+                <div class="col-12 col-sm-6 col-md-6 col-lg-4">
+                    <span class="la la-scissors la-3x mb-4"></span>
+                    <h4 class="h4 mb-2">{{ todo.mid_005 }}</h4>
+                    <hr>
+                    <ul class="list-unstyled list-line">
+                        <li>
+                            {{ todo.mid_txt_005 }}
+                        </li>
+
+                    </ul>
+                </div>
+                <div class="col-12 col-sm-6 col-md-6 col-lg-4">
+                    <span class="la la-cab la-3x mb-4"></span>
+                    <h4 class="h4 mb-2">{{ todo.mid_006 }}</h4>
+                    <hr>
+                    <ul class="list-unstyled list-line">
+                        <li>
+                            {{ todo.mid_txt_006 }}
+                        </li>
+
+                    </ul>
+                </div>
             </div>
-            <div class="col-12 col-sm-6 col-md-6 col-lg-4">
-              <span class="la la-scissors la-3x mb-4"></span>
-              <h4 class="h4 mb-2">{{ todo.mid_005 }}</h4>
-              <hr>
-              <ul class="list-unstyled list-line">
-                <li>
-                  {{ todo.mid_txt_005 }}
-                </li>
-                
-              </ul>
-            </div>
-            <div class="col-12 col-sm-6 col-md-6 col-lg-4">
-              <span class="la la-cab la-3x mb-4"></span>
-              <h4 class="h4 mb-2">{{ todo.mid_006 }}</h4>
-              <hr>
-              <ul class="list-unstyled list-line">
-                <li>
-                  {{ todo.mid_txt_006 }}
-                </li>
-                
-              </ul>
-            </div>        
-          </div>
         </div>
-      </div>
-      {% endfor %}
-
-    
-
-    
-
-   
+    </div>
+    {% endfor %}
 
 
 
 
 
-  </main><!-- End #main -->
-{% endblock  %}
+
+
+
+
+
+
+</main>
+<!-- End #main -->
+{% endblock %}

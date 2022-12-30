@@ -295,6 +295,19 @@ class youtube_studio(models.Model):
         verbose_name = 'youtube影片'
 
 
+class family_01(models.Model):
+    fam_001 = models.CharField(
+        max_length=1000, default='', verbose_name='照片連結')
+
+    def __str__(self):
+        return "全家福" + str(self.id) + " 號 "
+
+    class Meta:
+        verbose_name_plural = '全家福'
+        verbose_name = '全家福'
+        ordering = ['-id']
+
+
 class Flight(models.Model):
 
     items_choices = (

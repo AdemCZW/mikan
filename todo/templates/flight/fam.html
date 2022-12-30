@@ -1,9 +1,8 @@
-{% extends 'base.html' %} {% block content %}
-
+{% extends 'base.html' %} {% block content %} {% load static %}
+<link rel="stylesheet" href="{% static 'assets/css/templatemo-style.css' %}">
 <main id="main">
 
-    <!-- ======= Features Section ======= -->
-
+    <!-- ======= Blog Section ======= -->
     <section class="hero-section inner-page">
         <div class="wave">
 
@@ -22,8 +21,8 @@
                 <div class="col-12">
                     <div class="row justify-content-center">
                         <div class="col-md-7 text-center hero-text">
-                            <h1 data-aos="fade-up" data-aos-delay="">{{ object.at_tit_001 }}</h1>
-                            <p class="mb-5" data-aos="fade-up" data-aos-delay="100"></p>
+                            <h1 data-aos="fade-up" data-aos-delay="">全家福</h1>
+                            <p class="mb-5" data-aos="fade-up" data-aos-delay="100" style="font-family: 'Poppins', sans-serif !important;">Maternity</p>
                         </div>
                     </div>
                 </div>
@@ -32,28 +31,35 @@
 
     </section>
 
-    <section class="section pb-0">
-        <div class="container">
-            <div class="row col-lg-12 align-items-center">
-                <img src="{{ object.at_ph_001 }}">
+    <!-- MAIN POSTS -->
+    <section>
+        <hr>
+        <div class="site-section">
+            <div class="container ">
+                <div class="justify-content-center text-center mb-4">
+                    <div class="">
+                        <div class="blog-masonry masonry-true">
 
-                <hr>
-                <div class="col-lg-12 " style="margin-top: 5%;">
-                    {{ object.at_con_001|safe }} 日期：{{ object.pub_date }}
+                            {% for todo in object_list %}
+                            <div class="post-masonry col-md-4 col-sm-6">
+                                <div class="post-thumb">
+                                    <img src="{{ todo.family_01 }}">
+                                </div>
+                            </div>
+                            <!-- /.post-masonry -->
+
+                            {% endfor %}
+
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
+
+
+
     </section>
-
-
-
-    <!-- ======= Testimonials Section ======= -->
-
-
+    <!-- Modal ////-->
 </main>
 <!-- End #main -->
-
-
-
-
 {% endblock %}

@@ -8,7 +8,7 @@ from .views import (AtDetailView, AtListView, CastleView, CpListView,
                     Wedding01ListView, Wedding02ListView, Wedding03ListView,
                     Wedding04ListView, WeddingDeleteView,
                     WeddingDetailView, WeddingListView,
-                    WeddingUpdateView, YoutubeListView)
+                    WeddingUpdateView, YoutubeListView, FamilyListView)
 
 app_name = 'todo'
 urlpatterns = [
@@ -26,6 +26,7 @@ urlpatterns = [
     path('cp', CpListView.as_view(), name='cp'),
     path('pt', PtListView.as_view(), name='pt'),
     path('at', AtListView.as_view(), name='at'),
+    path('fam', FamilyListView.as_view(), name='fam'),
     path('detail/<int:pk>', AtDetailView.as_view(), name='detail'),
     path('wed-01', Wedding01ListView.as_view(), name='wed-01'),
     path('wed-02', Wedding02ListView.as_view(), name='wed-02'),
