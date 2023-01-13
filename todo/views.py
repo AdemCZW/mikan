@@ -5,7 +5,7 @@ from django.contrib.auth import authenticate
 from django.contrib.auth.decorators import login_required
 from django.utils.decorators import method_decorator
 from django.contrib import auth
-from .models import Member, Flight, Index_001, Pn_001, Price_003, Price_004, Studio_001, Service_001, Price_001, Price_002, Price_003, Price_004, Pn_001, Sg_001, Pf_001, Cp_001, Pt_001, at_001, Wedding_01, Wedding_02, Wedding_03, Wedding_04, location_01, castle_01, youtube_studio, family_01
+from .models import Member, Flight, Index_001, Pn_001, Price_003, Price_004, Studio_001, Service_001, Price_001, Price_002, Price_003, Price_004, Pn_001, Sg_001, Pf_001, Cp_001, Pt_001, at_001, Wedding_01, Wedding_02, Wedding_03, Wedding_04, location_01, castle_01, youtube_studio, family_01, wedding_form_001
 from .forms import FlightModelForm, IndexModelForm
 from django.contrib.auth.mixins import LoginRequiredMixin
 from .filters import FlightFilter
