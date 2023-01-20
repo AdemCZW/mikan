@@ -8,6 +8,10 @@ from django.contrib import auth
 from .models import Member, Flight, Index_001, Pn_001, Price_003, Price_004, Studio_001, Service_001, Price_001, Price_002, Price_003, Price_004, Pn_001, Sg_001, Pf_001, Cp_001, Pt_001, at_001, Wedding_01, Wedding_02, Wedding_03, Wedding_04, location_01, castle_01, youtube_studio, family_01, wedding_form_001
 from .forms import FlightModelForm, IndexModelForm
 from django.contrib.auth.mixins import LoginRequiredMixin
+from .serializers import wedding_serializer
+from rest_framework.decorators import api_view
+from rest_framework.response import Response
+from rest_framework.viewsets import ModelViewSet
 from .filters import FlightFilter
 from django.views.generic import (
     ListView,
@@ -16,6 +20,18 @@ from django.views.generic import (
     DeleteView,
     DetailView
 )
+
+
+class ApiForm001(ModelViewSet):
+    queryset = wedding_form_001.objects.all()
+    serializer_class = wedding_serializer
+
+
+@api_view(['GET'])
+def weddinglistapi(request):
+    Apilists = wedding_form_001.objects.all()
+    serializer = wedding_serializer(Apilists, many=True)
+    return Response(serializer.data)
 
 
 class FlightListView(ListView):

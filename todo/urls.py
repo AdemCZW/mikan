@@ -1,5 +1,6 @@
 from django.urls import path
-
+from . import views
+from rest_framework import routers
 from .views import (AtDetailView, AtListView, CastleView, CpListView,
                     FlightCreateView, FlightMyListView, LocationView,
                     PfListView, PnListView, Price001ListView, Price002ListView,
@@ -8,9 +9,12 @@ from .views import (AtDetailView, AtListView, CastleView, CpListView,
                     Wedding01ListView, Wedding02ListView, Wedding03ListView,
                     Wedding04ListView, WeddingDeleteView,
                     WeddingDetailView, WeddingListView,
-                    WeddingUpdateView, YoutubeListView, FamilyListView)
+                    WeddingUpdateView, YoutubeListView, FamilyListView, ApiForm001)
 
 app_name = 'todo'
+router = routers.DefaultRouter()
+router.register('apiset', views.ApiForm001)
+
 urlpatterns = [
     path('', WeddingListView.as_view(), name='list'),
     path('studio', StudioListView.as_view(), name='studio'),
@@ -39,4 +43,5 @@ urlpatterns = [
     path('update/<int:pk>', WeddingUpdateView.as_view(), name='update'),
     path('delete/<int:pk>', WeddingDeleteView.as_view(), name='delete'),
     path('detail/<int:pk>', WeddingDetailView.as_view(), name='detail'),
+    path('list', views.weddinglistapi, name='list-api'),
 ]

@@ -326,9 +326,7 @@ class wedding_form_001 (models.Model):
 class Flight(models.Model):
 
     items_choices = (
-        ('tops', '衣服'), ('pants', '褲子'), ('shoes', '鞋子'), ('accessories',
-                                                           '配件'), ('maintenance', '保養品'), ('makeup', '化妝品'),
-    )
+        ('tops', '衣服'), ('pants', '褲子'), ('shoes', '鞋子'), ('accessories', '配件'), ('maintenance', '保養品'), ('makeup', '化妝品'),)
     user = models.ForeignKey(User, default=1, on_delete=models.CASCADE)
     items = models.CharField(max_length=20, choices=items_choices)
     fromname = models.CharField(max_length=10)
