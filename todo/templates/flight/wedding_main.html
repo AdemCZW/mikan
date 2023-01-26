@@ -35,19 +35,14 @@
 <!-- End Hero -->
 
 <main id="main">
-
     <!-- ======= Home Section ======= -->
-
-
     <section class="section">
-
         <div class="container">
             {% load static %} {% csrf_token %} {% for todo in object_list %}
             <div class="row">
                 <div class="col-lg-6 col-md-12">
                     <div class="step box-001">
                         <img src="{{ todo.mid_ph_010 }}">
-
                     </div>
                 </div>
                 <div class="col-lg-6">
