@@ -1,0 +1,41 @@
+{% extends 'kid-base-2.html' %} {% block content %} {% load static %}
+<div id="services" class="our-services section">
+    <div class="row">
+        <div class="col-lg-6 offset-lg-3">
+            <div class="section-heading">
+                <h2><span>兒童抓周照</span></h2>
+            </div>
+        </div>
+    </div>
+    <div class="" id="outbox">
+        {% for kids in object_list %}
+        <div class="content_box">
+            <img src="{{ kids.kids_ph_oyoc_001 }}" alt="">
+        </div>
+        {% endfor %}
+    </div>
+</div>
+<style>
+    #outbox {
+        -moz-column-count: 2;
+        -moz-column-gap: 10px;
+        -webkit-column-count: 2;
+        -webkit-column-gap: 10px;
+        column-count: 2;
+        column-gap: 10px;
+        width: 80%;
+        margin: 0 auto;
+    }
+    
+    .content_box {
+        width: 100%;
+        display: inline-block;
+        font-size: 12px;
+        overflow: hidden;
+        color: #353535;
+        -webkit-border-radius: 5px;
+        -moz-border-radius: 5px;
+        border-radius: 5px;
+    }
+</style>
+{% endblock %}
