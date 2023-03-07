@@ -310,9 +310,25 @@ class family_01(models.Model):
 
 class wedding_form_001 (models.Model):
     wed_001_name_w = models.CharField(
-        max_length=1000, default='', verbose_name='新郎姓名')
+        max_length=1000, default='', verbose_name='新娘姓名')
     wed_001_name_m = models.CharField(
         max_length=1000, default='', verbose_name='新郎姓名')
+    wed_001_phone_w = models.CharField(
+        max_length=1000, default='', verbose_name='新娘電話')
+    wed_001_phone_m = models.CharField(
+        max_length=1000, default='', verbose_name='新郎電話')
+    wed_001_email = models.CharField(
+        max_length=1000, default='', verbose_name='信箱')
+    wed_001_address = models.CharField(
+        max_length=1000, default='', verbose_name='地址')
+    wed_001_items_01 = models.CharField(
+        max_length=1000, default='', verbose_name='產品項目')
+    wed_001_items_02 = models.CharField(
+        max_length=1000, default='', verbose_name='預約套系')
+    wed_001_items_03 = models.CharField(
+        max_length=1000, default='', verbose_name='娘家冊/掌中本')
+    wed_001_items_04 = models.CharField(
+        max_length=1000, default='', verbose_name='放大商品')
 
     def __str__(self):
         return "婚紗表單" + str(self.id) + " 號 "

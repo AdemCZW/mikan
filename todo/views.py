@@ -12,6 +12,7 @@ from .serializers import wedding_serializer
 from rest_framework.decorators import api_view
 from rest_framework.response import Response
 from rest_framework.viewsets import ModelViewSet
+from rest_framework import generics
 from .filters import FlightFilter
 from django.views.generic import (
     ListView,
@@ -20,6 +21,16 @@ from django.views.generic import (
     DeleteView,
     DetailView
 )
+
+
+class ListCreateAPIView(generics.ListCreateAPIView):
+    queryset = wedding_form_001.objects.all()
+    serializer_class = wedding_serializer
+
+
+class DetailAPIview(generics.RetrieveUpdateDestroyAPIView):
+    queryset = wedding_form_001.objects.all()
+    serializer_class = wedding_serializer
 
 
 class ApiForm001(ModelViewSet):
