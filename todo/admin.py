@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Customer, Flight, Index_001, Price_002, Studio_001, Service_001, Price_001, Price_002, Price_003, Price_004, Pn_001, Pf_001, Cp_001, Sg_001, Pt_001, at_001, Wedding_01, Wedding_02, Wedding_03, Wedding_04, location_01, castle_01, youtube_studio, family_01, wedding_form_001
+from .models import Customer, Flight, Index_001, Price_002, Studio_001, Service_001, Price_001, Price_002, Price_003, Price_004, Pn_001, Pf_001, Cp_001, Sg_001, Pt_001, at_001, Wedding_01, Wedding_02, Wedding_03, Wedding_04, location_01, castle_01, youtube_studio, family_01, wedding_form_001, os_001
 
 
 class IndexAdmin(admin.ModelAdmin):
@@ -156,3 +156,10 @@ class WeddingformAdmin(admin.ModelAdmin):
 
 
 admin.site.register(wedding_form_001)
+
+
+class overseaformAdmin(admin.ModelAdmin):
+    list_display = ('os_tit_001', 'os_con_001')
+
+
+admin.site.register(os_001)

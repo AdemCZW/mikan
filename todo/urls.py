@@ -10,7 +10,7 @@ from .views import (AtDetailView, AtListView, CastleView, CpListView,
                     Wedding04ListView, WeddingDeleteView,
                     WeddingDetailView, WeddingListView,
                     WeddingUpdateView, YoutubeListView, FamilyListView, DetailAPIview,
-                    ListCreateAPIView)
+                    ListCreateAPIView, OverseaListView)
 
 app_name = 'todo'
 router = routers.DefaultRouter()
@@ -46,4 +46,5 @@ urlpatterns = [
     path('detail/<int:pk>', WeddingDetailView.as_view(), name='detail'),
     path('form', ListCreateAPIView.as_view(), name='list001'),
     path('form/<str:pk>', DetailAPIview.as_view(), name='del-api'),
+    path('os', OverseaListView.as_view(), name='os'),
 ]

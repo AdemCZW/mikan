@@ -204,6 +204,22 @@ class at_001(models.Model):
         ordering = ['-id']
 
 
+class os_001(models.Model):
+    os_tit_001 = models.CharField(
+        max_length=1000, default='標題', verbose_name='海外標題')
+
+    os_con_001 = RichTextField(
+        max_length=1000, default='內容', blank=True, null=True, verbose_name='海外內容')
+
+    def __str__(self):
+        return "海外-" + str(self.id) + " 號 "
+
+    class Meta:
+        verbose_name_plural = '海外專區'
+        verbose_name = '海外專區'
+        ordering = ['-id']
+
+
 class Wedding_01(models.Model):
     Wedding_ph_001 = models.CharField(
         max_length=1000, default='圖片連結', verbose_name='照片連結')
