@@ -159,7 +159,7 @@ admin.site.register(wedding_form_001)
 
 
 class overseaformAdmin(admin.ModelAdmin):
-    list_display = ('os_tit_001', 'os_con_001')
+    list_display = ()
 
 
 admin.site.register(os_001)

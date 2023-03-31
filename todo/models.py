@@ -189,30 +189,14 @@ class Pt_001(models.Model):
 
 class at_001(models.Model):
     at_tit_001 = models.CharField(
-        max_length=1000, default='標題', verbose_name='活動名稱')
+        max_length=1000, default='標題', verbose_name='標題')
     at_ph_001 = models.CharField(
-        max_length=1000, default='活動圖照', verbose_name='照片連結')
+        max_length=1000, default='海外圖照', verbose_name='照片連結')
     at_con_001 = RichTextField(
-        max_length=1000, default='活動內容', blank=True, null=True, verbose_name='活動內容')
+        max_length=1000, default='海外內容', blank=True, null=True, verbose_name='海外內容')
 
     def __str__(self):
-        return "活動內容" + str(self.id) + " 號 "
-
-    class Meta:
-        verbose_name_plural = '活動專區'
-        verbose_name = '活動專區'
-        ordering = ['-id']
-
-
-class os_001(models.Model):
-    os_tit_001 = models.CharField(
-        max_length=1000, default='標題', verbose_name='海外標題')
-
-    os_con_001 = RichTextField(
-        max_length=1000, default='內容', blank=True, null=True, verbose_name='海外內容')
-
-    def __str__(self):
-        return "海外-" + str(self.id) + " 號 "
+        return "海外內容" + str(self.id) + " 號 "
 
     class Meta:
         verbose_name_plural = '海外專區'
@@ -390,3 +374,19 @@ class Customer(models.Model):
     email = models.EmailField(blank=False, null=False)
     tel = models.IntegerField()
     password = models.CharField(max_length=20, blank=False, null=True)
+
+
+class os_001(models.Model):
+    os_tit_001 = models.CharField(
+        max_length=1000, default='標題', verbose_name='海外標題')
+
+    os_con_001 = RichTextField(
+        max_length=1000, default='內容', blank=True, null=True, verbose_name='海外內容')
+
+    def __str__(self):
+        return "海外-" + str(self.id) + " 號 "
+
+    class Meta:
+        verbose_name_plural = '海外專區'
+        verbose_name = '海外專區'
+        ordering = ['-id']
