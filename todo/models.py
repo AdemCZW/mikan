@@ -189,11 +189,13 @@ class Pt_001(models.Model):
 
 class at_001(models.Model):
     at_tit_001 = models.CharField(
-        max_length=1000, default='標題', verbose_name='標題')
+        max_length=1000, default='', verbose_name='大標題')
     at_ph_001 = models.CharField(
-        max_length=1000, default='海外圖照', verbose_name='照片連結')
+        max_length=1000, default='', verbose_name='封面照')
+    at_in_tit_001 = models.CharField(
+        max_length=1000, default='', verbose_name='內文標題')
     at_con_001 = RichTextField(
-        max_length=1000, default='海外內容', blank=True, null=True, verbose_name='海外內容')
+        max_length=100000, default='', blank=True, null=True, verbose_name='海外內容')
 
     def __str__(self):
         return "海外內容" + str(self.id) + " 號 "
