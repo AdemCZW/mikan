@@ -84,20 +84,16 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'djangotodo.wsgi.application'
 
-
-# Database
-# https://docs.djangoproject.com/en/3.0/ref/settings/#databases
-
-
 DATABASES = {
     'default': {
 
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'railway',
-        'USER': 'postgres',
-        'PASSWORD': 'CFBE6dbgd6afFcaa4egGcEEd34fbdEaB',
-        'HOST': 'viaduct.proxy.rlwy.net',
-        'PORT': '17896',
+        'DATABASE_PRIVATE_URL': 'postgresql://postgres:e6GBddbcb3e15Aa453BFb11E3D6B33dC@postgres.railway.internal:5432/railway',
+        'DATABASE_URL': 'postgresql://postgres:e6GBddbcb3e15Aa453BFb11E3D6B33dC@viaduct.proxy.rlwy.net:41935/railway',
+        'PGDATABASE': 'railway',
+        'PGPASSWORD': 'CFBE6dbgd6afFcaa4egGcEEd34fbdEaB',
+        'PGHOST': 'viaduct.proxy.rlwy.net',
+        'PGPORT': '17896',
+        'PGUSER': 'postgres',
     }
 }
 
